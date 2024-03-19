@@ -1,0 +1,19 @@
+.form-group {
+    position: relative;
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.error-text {
+
+}
+
+
+.form-input {
+
+}
+
+.form-textarea {
+
+}

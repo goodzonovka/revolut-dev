@@ -1,0 +1,38 @@
+/** Базовые анимации: */
+@import 'keyframes';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    position: relative;
+    flex: 1 1 auto;
+    @media (min-width: $ds) {
+        min-height: 503px;
+    }
+}
+
+.container {
+    width: 540px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    @media (min-width: $tv) {
+        width: 720px;
+        padding: 0;
+    }
+    @media (min-width: $th) {
+        width: 912px;
+    }
+    @media (min-width: $ds) {
+        width: 1170px;
+    }
+    @media (min-width: 1366px) {
+        width: 1296px;
+    }
+}
+

@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    &.lock {
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+body {
+    overscroll-behavior: none;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $black;
+    background-color: #fff;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    transition: all .3s;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    transition: all .3s;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+svg, img {
+    flex-shrink: 0;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+sup {
+    color: inherit;
+}
