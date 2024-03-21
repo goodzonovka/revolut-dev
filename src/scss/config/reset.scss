@@ -44,6 +44,10 @@ body {
     text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    @media (max-width: 991px) {
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
 
 input,

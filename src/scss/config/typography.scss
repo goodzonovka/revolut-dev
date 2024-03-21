@@ -1,1 +1,8 @@
 /* ТИПОГРАФИЯ */
+
+.text-small {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 300;
+    color: $text-color-secondary;
+}

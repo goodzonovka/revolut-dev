@@ -1,0 +1,99 @@
+<div class="block content-view-1">
+
+    <div class="form__group">
+        <label class="form__label">Name</label>
+        <input type="text" class="form__input" placeholder="Select">
+    </div>
+
+    <div class="form__group">
+        <label class="form__label">Type</label>
+        <select class="choices-select-js">
+            <option value="">Select</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+    </div>
+
+    <div class="form__group">
+        <label class="form__label">Measurement</label>
+        <select class="choices-select-js">
+            <option value="">Select</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+    </div>
+
+    <div class="form__group form__group-dates">
+        <label class="form__label">Start Date/End Date</label>
+        <div class="form__wrap-dates">
+            <div class="p-relative">
+                <input type="text" class="form__input form__input-big-height date-input-js" name="dateRange"
+                       placeholder="Start Date">
+            </div>
+            <svg width="24" height="24">
+                <use href="/images/icons/icons.svg#arrow-right"></use>
+            </svg>
+            <div class="p-relative">
+                <input type="text" class="form__input form__input-big-height date-input-js" name="dateRange"
+                       placeholder="End Date">
+                <svg width="24" height="24" class="date">
+                    <use href="/images/icons/icons.svg#date"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__group form__group-query">
+        <div class="form__label">
+            Build Query
+            <div class="text-small">(Track your company goal)</div>
+        </div>
+        <div class="editor__wrap">
+            <div class="editor__bg">
+                <div id="editor" class="editor">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+            </div>
+            <div class="editor__footer">
+                <div class="editor__error">
+                    Syntax error: syntax error at or near "year".
+                </div>
+                <button class="btn">
+                    <svg width="24" height="24" class="date">
+                        <use href="/images/icons/icons.svg#play"></use>
+                    </svg>
+                    Run Query
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__group form__group-bottom">
+        <label class="form__label">Start Value</label>
+        <input type="text" class="form__input form__input-small-width" placeholder="Select">
+    </div>
+
+    <div class="form__group form__group-bottom">
+        <label class="form__label">Current Value</label>
+        <input type="text" class="form__input form__input-small-width" placeholder="Select">
+    </div>
+
+    <div class="form__group form__group-bottom">
+        <label class="form__label">Target Value</label>
+        <div class="p-relative">
+            <input type="text" class="form__input form__input-small-width" placeholder="Select">
+            <div class="percent">-5%</div>
+        </div>
+    </div>
+
+    <div class="form__buttons">
+        <button class="btn btn-secondary">Cancel</button>
+        <button class="btn">Save</button>
+    </div>
+
+</div>

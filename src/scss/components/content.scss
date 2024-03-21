@@ -1,0 +1,270 @@
+.content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 23px 32px 45px calc(280px + 32px);
+    background-color: $bg-color;
+    &__header {
+        padding-right: 19px;
+        padding-bottom: 23px;
+        margin-left: -3px;
+        margin-right: -3px;
+        border-bottom: 2px solid $secondary-color;
+    }
+}
+
+.user-greeting {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin-left: 1rem;
+        border-radius: 50%;
+        color: $text-color-secondary;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+
+    margin-top: 14px;
+    padding: 0 1rem;
+    font-size: 24px;
+    line-height: 29px;
+    li:not(:last-child) {
+        margin-right: 8px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        color: $text-color-secondary;
+        svg {
+            margin-left: .5rem;
+        }
+    }
+}
+
+.content-view-1 {
+    margin-top: 14px;
+    padding: 41px 16px 16px 32px;
+}
+
+.content-list-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem -8px -32px;
+    .block {
+        width: calc(33.33% - 16px);
+        margin: 0 8px 32px;
+        min-height: 335px;
+    }
+    .block-goals {
+        padding: 1rem;
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 26px;
+        }
+        &__value {
+            padding: 0 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 26px;
+            font-weight: 400;
+            svg {
+                margin-right: .5rem;
+                color: $text-color-secondary;
+            }
+        }
+        &__percent {
+            padding: 0 16px;
+            font-size: 24px;
+            line-height: 39px;
+            font-weight: 600;
+        }
+        &__circle {
+            margin-top: 2px;
+        }
+    }
+    .next-release {
+        display: flex;
+        flex-direction: column;
+        padding: 35px 30px 24px;
+        &__header {
+            display: flex;
+            align-items: center;
+            line-height: 26px;
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                margin-right: 1rem;
+                border-radius: 10px;
+                color: $main-color;
+                background-color: $secondary-color;
+            }
+        }
+        &__data {
+            margin-top: 2rem;
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 400;
+        }
+        &__days {
+            margin-top: 2rem;
+            margin-bottom: auto;
+            display: flex;
+            align-items: center;
+            line-height: 26px;
+            svg {
+                margin-right: 1rem;
+                color: $main-color;
+            }
+        }
+        .btn {
+            align-self: flex-end;
+            margin-top: 2rem;
+            margin-right: -6px;
+        }
+    }
+    .calendar {
+        padding: 26px 35px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media (min-width: $tv) and (max-width: 991px) {
+    .content {
+        padding: 23px 16px 23px 236px;
+    }
+}
+@media (min-width: $th) and (max-width: $device) {
+    .content {
+        padding: 23px 16px 45px 258px;
+    }
+}
+@media (min-width: $tv) and (max-width: $device){
+    .content {
+        padding: 23px 32px 45px calc(240px + 32px);
+    }
+    .content-view-1 {
+        padding-left: 16px;
+    }
+}
+@media (max-width: 1365px) {
+    .content-list-blocks .block {
+        min-height: 300px;
+    }
+}
+@media (max-width: 1279px) {
+    .content-list-blocks .block {
+        min-height: 260px;
+    }
+}
+@media (max-width: $device) {
+    .content-list-blocks .block {
+        width: calc(50% - 16px);
+    }
+}
+@media (max-width: 991px) {
+    .user-greeting, .breadcrumbs {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .content-list-blocks .block {
+        width: calc(100% - 16px);
+    }
+}
+@media (max-width: $mobile) {
+    .content {
+        padding: 12px 16px 23px;
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            padding-right: 0;
+        }
+    }
+    .content-view-1 {
+        padding: 24px 16px;
+    }
+    .sidebar__btn-open {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .user-greeting {
+        span {
+            white-space: nowrap;
+            max-width: 220px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &__icon {
+            width: auto;
+            height: auto;
+            margin-left: 10px;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .content-list-blocks {
+        .block {
+            width: calc(50% - 16px);
+        }
+        .block-goals {
+            &__header {
+                padding-right: 0;
+            }
+            &__value {
+                padding: 0;
+            }
+
+            &__percent {
+                padding: 0 4px;
+            }
+        }
+        .next-release {
+            padding: 1rem;
+            .btn {
+                margin-right: 0;
+            }
+        }
+        .calendar {
+            padding: 1rem;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .content-list-blocks {
+        margin-bottom: -24px;
+        .block {
+            width: calc(100% - 16px);
+            margin-bottom: 24px;
+        }
+    }
+}
+@media (max-width: 374px) {
+    .user-greeting {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}

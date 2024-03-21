@@ -2,14 +2,35 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    height: 40px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $white;
+    background-color: $main-color;
+    border-radius: 10px;
     user-select: none;
+    white-space: nowrap;
+    svg {
+        margin-right: .5rem;
+    }
     @media (min-width: $ds) {
         &:hover {
-
+            background-color: $btn-hover;
         }
 
         &:focus {
 
+        }
+    }
+}
+
+.btn-secondary {
+    color: $text-color;
+    background-color: $secondary-color;
+    @media (min-width: $ds) {
+        &:hover {
+            background-color: $btn-secondary-hover;
         }
     }
 }

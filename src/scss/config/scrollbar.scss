@@ -19,10 +19,10 @@
     &::-webkit-scrollbar-thumb {
       border-radius: rem(8);
       border: 0 none #fff;
-      background-color: $black;
-
+      background-color: $secondary-color;
+      cursor: pointer;
       &:hover {
-        //background-color: var(--primary-hover-color);
+        background-color: $main-color;
       }
     }
   }

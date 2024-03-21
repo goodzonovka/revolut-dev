@@ -12,11 +12,30 @@ $dl: 1900px;
 
 
 $font-family: 'Inter', sans-serif;
-$font-size: 14px;
-$line-height: 20px;
-$font-weight: 400;
+$font-size: 16px;
+$line-height: 19px;
+$font-weight: 500;
 
+// colors
 $black: #000;
 $white: #fff;
+$red: #D2222D;
+$green: #238823;
+$yellow: #FFBF00;
+
+// main colors
+$main-color: #8950FC;
+$secondary-color: #E1D3FE;
+
+// bg
+$bg-color: #EFF2F8;
+
+// buttons
+$btn-hover: #562DA8;
+$btn-secondary-hover: #B19BDF;
+
+// text
+$text-color: #201F2B;
+$text-color-secondary: #727693;
 
 $transition: .3s ease-in-out;
