@@ -126,6 +126,7 @@
             color: $text-color-secondary;
             &.is-highlighted {
                 background-color: $secondary-color;
+                box-shadow: inset 3px 0 0 #8950FC;
             }
         }
     }
