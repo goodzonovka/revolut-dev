@@ -1,0 +1,264 @@
+body:has(.table__additional-information) .table {
+    margin-top: 1.5rem;
+}
+.table {
+    margin-top: 1rem;
+    &.table-view-2 {
+        .progress {
+            flex-grow: 0;
+            width: 103px;
+            max-width: 100%;
+        }
+        .table__th, .table__td {
+            width: 25%;
+        }
+        .table__th {
+            padding: 16px 0 16px 12px;
+            &:first-child {
+                padding-left: 16px;
+            }
+            &:last-child {
+                padding-right: 16px;
+            }
+            svg {
+                margin-left: 10px;
+            }
+        }
+        .table__td {
+            &-dev-status, &-progress {
+                justify-content: center;
+            }
+        }
+    }
+    &:has(.table__td-goal) {
+        .table__td, .table__th {
+            flex: initial;
+            width: 16.66%;
+            &-created {
+                width: calc(16.66% - 32px);
+                padding: 16px 8px;
+            }
+            &-dev-status {
+                width: calc(16.66% - 32px);
+                padding: 0;
+            }
+            &-progress {
+                flex-grow: 1;
+                padding: 16px 10px 16px 16px;
+                svg {
+                    margin-left: 2px;
+                }
+            }
+        }
+        .table__th-progress {
+            justify-content: center;
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+    }
+    &__scroll {
+        overflow: auto;
+    }
+    &__inner {
+        min-width: 856px;
+    }
+    &__title {
+        font-size: 24px;
+        line-height: 39px;
+        font-weight: 400;
+    }
+
+    &__row {
+        display: flex;
+        &:not(.table__row-header) {
+            box-shadow: inset 0 1px $secondary-color;
+        }
+        &-header {
+            background-color: $bg-color;
+            box-shadow: inset 0 -1px  $main-color, inset 0 1px $main-color;
+        }
+    }
+
+    &__th, &__td {
+       flex: 1;
+        padding: 16px 17px;
+
+        font-weight: 400;
+        line-height: 26px;
+    }
+    &__th {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        svg {
+            margin-left: 1rem;
+            color: $text-color-secondary;
+        }
+    }
+    &__td {
+        display: flex;
+        align-items: center;
+        color: $text-color-secondary;
+        &:has(.status) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &:has(span) span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .icon-done {
+            color: $main-color;
+        }
+        .icon-progress {
+            color: $text-color-secondary;
+        }
+    }
+    &__additional-information {
+        display: flex;
+        margin-top: 1.5rem;
+        .block {
+            min-width: 236px;
+            padding: 19px 16px;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 600;
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+        .icon-block {
+            width: 56px;
+            height: 56px;
+        }
+        .text-small {
+            margin-bottom: .5rem;
+            font-size: 1rem;
+            line-height: 19px;
+            font-weight: 400;
+            letter-spacing: -.27px;
+        }
+    }
+    &__sort {
+        display: flex;
+        align-items: center;
+        background-color: #F2F2F3;
+        border-radius: 60px;
+        button {
+            padding: 4px 19px;
+            font-size: 10px;
+            line-height: 20px;
+            font-family: "DM Sans", sans-serif;
+            letter-spacing: -.4px;
+            color: $text-color-secondary;
+            border-radius: 60px;
+            &.active {
+                background-color: $secondary-color;
+            }
+            &:last-child {
+                padding: 4px 11px;
+            }
+        }
+    }
+    .status {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 0;
+        font-weight: 400;
+        line-height: 26px;
+        white-space: nowrap;
+        color: $white;
+        border-radius: 10px;
+        &-1 {
+            background-color: $red;
+        }
+        &-2 {
+            background-color: $green;
+        }
+        &-3 {
+            background-color: $yellow;
+        }
+        &-4 {
+            background-color: $main-color;
+        }
+    }
+    .progress {
+        flex-grow: 1;
+        height: 12px;
+        background-color: $secondary-color;
+        border-radius: 10px;
+        &__active {
+            height: 100%;
+            background-color: $main-color;
+            border-radius: 10px;
+        }
+        &__value {
+            width: 59px;
+            flex-shrink: 0;
+        }
+    }
+    @media (min-width: $ds) and (max-width: 1365px) {
+        &.table-view-2 {
+            font-size: 14px;
+        }
+    }
+    @media (min-width: $ds) {
+        &__sort button:not(.active):hover, &-pagination__item:hover {
+            color: $main-color;
+        }
+    }
+    @media (max-width: 991px) {
+        &__title {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+    @media (max-width: $mobile) {
+        &__top {
+            padding: 1rem;
+        }
+        &__additional-information .block {
+            flex-direction: column;
+            align-items: flex-start;
+            width: calc(50% - .5rem);
+            min-width: auto;
+            padding: 12px;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+            .icon-block {
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+            .icon-block-right {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                .text-small {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+    @media (max-width: 374px) {
+        &__title {
+            font-size: 18px;
+            line-height: 23px;
+        }
+    }
+    @media (max-width: 359px) {
+        .table__sort button {
+            padding: 4px 11px;
+            &:last-child {
+                padding: 4px 8px;
+            }
+        }
+    }
+}

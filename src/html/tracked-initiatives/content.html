@@ -1,0 +1,172 @@
+<div class="tracked-initiatives">
+    <button class="tracked-initiatives-sidebar__open" aria-label="Open additional information">
+        <svg width="30" height="30">
+            <use href="/images/icons/icons.svg#hamburger-list"></use>
+        </svg>
+    </button>
+    <div class="tracked-initiatives-content">
+        <div class="block tracked-initiatives-content__top">
+            <div class="form__group form__group-name">
+                <label class="form__label">Name</label>
+                <input type="text" class="form__input" placeholder="Okta Integration">
+            </div>
+
+            <div class="form__group form__group-query">
+                <div class="form__label">
+                    Set Query
+                    <div class="text-small">(Impact on company goal)</div>
+                </div>
+                <div class="editor__wrap">
+                    <div class="editor__bg">
+                        <div class="editor editor-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-demo">
+                <img src="images/stub-chart-big.png" width="666" height="384" alt="">
+            </div>
+        </div>
+
+        <div class="tracked-initiatives-content__list">
+            <div class="block">
+                <div class="text-border">#support tickets</div>
+                <div class="chart-demo">
+                    <img src="images/stub-chart-small.png" width="325" height="172" alt="">
+                </div>
+                <div class="editor__bg">
+                <div class="editor editor-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+            </div>
+            </div>
+
+            <div class="block">
+                <div class="text-border">#currency handled</div>
+                <div class="chart-demo">
+                    <img src="images/stub-chart-small.png" width="325" height="172" alt="">
+                </div>
+                <div class="editor__bg">
+                    <div class="editor editor-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="text-border">#support tickets</div>
+                <div class="chart-demo">
+                    <img src="images/stub-chart-small.png" width="325" height="172" alt="">
+                </div>
+                <div class="editor__bg">
+                    <div class="editor editor-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="text-border">#currency handled</div>
+                <div class="chart-demo">
+                    <img src="images/stub-chart-small.png" width="325" height="172" alt="">
+                </div>
+                <div class="editor__bg">
+                    <div class="editor editor-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block tracked-initiatives-sidebar">
+        <button class="tracked-initiatives-sidebar__close" aria-label="Close additional information">
+            <svg width="44" height="44">
+                <use href="/images/icons/icons.svg#cancel"></use>
+            </svg>
+        </button>
+
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Release Date</div>
+
+            <div class="tracked-initiatives-sidebar__value">23 Oct</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Version ID</div>
+
+            <div class="tracked-initiatives-sidebar__value">V1.2340</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Priority</div>
+
+            <div class="tracked-initiatives-sidebar__value tracked-initiatives-sidebar__value-green">Low</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Development cost</div>
+
+            <div class="tracked-initiatives-sidebar__value">$35-50K</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div class="tracked-initiatives-sidebar__header">
+                <div>KPI results</div>
+                <button class="btn">Add KPIs</button>
+            </div>
+
+            <ul class="kpi">
+                <li class="kpi__item">
+                    <div class="kpi__title">#Support tickets</div>
+                    <div class="kpi__progress-full">
+                        <div class="kpi__progress-active" style="width:55%">
+                            <span class="kpi__progress-value">55%</span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="kpi__item">
+                    <div class="kpi__title">#Currency handled</div>
+                    <div class="kpi__progress-full">
+                        <div class="kpi__progress-active" style="width:100%">
+                            <span class="kpi__progress-value">100%</span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="kpi__item">
+                    <div class="kpi__title">#Currency clicked</div>
+                    <div class="kpi__progress-full">
+                        <div class="kpi__progress-active" style="width:55%">
+                            <span class="kpi__progress-value">55%</span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="kpi__item">
+                    <div class="kpi__title">#Cashback created</div>
+                    <div class="kpi__progress-full">
+                        <div class="kpi__progress-active" style="width:55%">
+                            <span class="kpi__progress-value">55%</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

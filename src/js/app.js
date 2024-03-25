@@ -88,26 +88,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    if (document.getElementById('editor')) {
-        var editor = ace.edit("editor");
-        editor.session.setMode("ace/mode/sql");
-        editor.setTheme("ace/theme/tomorrow_night_blue");
-        if (window.innerWidth < 359) {
-            console.log('q')
-            editor.setFontSize(12);
-        } else if (window.innerWidth < 768) {
-            editor.setFontSize(14);
-        } else {
-            editor.setFontSize(16);
-        }
+    let editors = document.querySelectorAll('.editor');
+    if (editors) {
+        editors.forEach(function (el, index) {
+            var editor = ace.edit(el);
+            editor.session.setMode("ace/mode/sql");
+            editor.setTheme("ace/theme/tomorrow_night_blue");
+            if (window.innerWidth < 359) {
+                editor.setFontSize(12);
+            } else if (window.innerWidth < 768) {
+                editor.setFontSize(14);
+            } else {
+                editor.setFontSize(16);
+            }
+        });
     }
 
     document.querySelector('.sidebar__btn-open').addEventListener('click', function () {
         document.querySelector('.sidebar').classList.add('active');
+        document.body.classList.add('overflow-hidden');
     });
     document.querySelector('.sidebar__close').addEventListener('click', function () {
         document.querySelector('.sidebar').classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
     });
+
+    let trackedInitiativesSidebarOpen = document.querySelector('.tracked-initiatives-sidebar__open');
+    if (trackedInitiativesSidebarOpen) {
+        trackedInitiativesSidebarOpen.addEventListener('click', function () {
+            document.querySelector('.tracked-initiatives-sidebar').classList.add('active');
+            document.body.classList.add('overflow-hidden');
+        });
+        document.querySelector('.tracked-initiatives-sidebar__close').addEventListener('click', function () {
+            document.querySelector('.tracked-initiatives-sidebar').classList.remove('active');
+            document.body.classList.remove('overflow-hidden');
+        });
+    }
 
     document.querySelectorAll('.show-pass').forEach(button => {
         button.addEventListener('click', () => {

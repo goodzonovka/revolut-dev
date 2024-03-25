@@ -3,7 +3,7 @@
   * {
     scrollbar-width: rem(8);
     //scrollbar-color: var(--primary-color) #d6d6d6;
-    scrollbar-color: red;
+    scrollbar-color: $secondary-color;
 
     // Chrome, Edge, and Safari
     &::-webkit-scrollbar {

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html', {
+'title': 'All Goals'
+})
+<body>
+
+<div class="wrapper">
+    @@include('html/all-goals/sidebar.html')
+
+    <div class="content">
+
+        <div class="content__header">
+            <button class="sidebar__btn-open" aria-label="Open menu">
+                <svg width="32" height="32">
+                    <use href="/images/icons/icons.svg#hamburger"></use>
+                </svg>
+            </button>
+
+            @@include('html/components/user-greeting.html')
+        </div>
+
+        <ul class="breadcrumbs">
+            <li>
+                <a href="#">
+                    Goals
+                    <svg width="24" height="24">
+                        <use href="/images/icons/icons.svg#chevron-right"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                All Goals
+            </li>
+        </ul>
+
+        @@include('html/all-goals/content.html')
+    </div>
+</div>
+
+<script src="js/app.min.js"></script>
+</body>
+</html>
