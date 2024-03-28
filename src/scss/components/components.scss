@@ -1,3 +1,22 @@
+.flatpickr-calendar.rangeMode {
+    width: 574px;
+    .flatpickr-days {
+        width: 100%;
+    }
+    .dayContainer {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
+    .flatpickr-day {
+        max-width: none;
+    }
+}
+
+.date-range input {
+    pointer-events: none;
+}
+
 .block {
     background-color: $white;
     border-radius: 10px;

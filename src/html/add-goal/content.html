@@ -27,16 +27,16 @@
 
     <div class="form__group form__group-dates">
         <label class="form__label">Start Date/End Date</label>
-        <div class="form__wrap-dates">
+        <div id="dateRange" class="form__wrap-dates date-range">
             <div class="p-relative">
-                <input type="text" class="form__input date-input-js" name="dateRange"
+                <input id="dateRageStartDate" type="text" class="form__input" name="dateRange"
                        placeholder="Start Date">
             </div>
-            <svg width="24" height="24">
+            <svg width="24" height="24" class="arrow-right">
                 <use href="/images/icons/icons.svg#arrow-right"></use>
             </svg>
             <div class="p-relative">
-                <input type="text" class="form__input date-input-js" name="dateRange"
+                <input id="dateRageEndDate" type="text" class="form__input" name="dateRange"
                        placeholder="End Date">
                 <svg width="24" height="24" class="date">
                     <use href="/images/icons/icons.svg#date"></use>

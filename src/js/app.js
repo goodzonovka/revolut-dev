@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
         optionsData[value] = imgSrc;
     });
 
+    // Инициализация Select2 для элемента select
+    $('#select2').select2({
+        tags: true,
+    });
+
     if (document.getElementById('multi-select-js')) {
         const multiSelect = new Choices('#multi-select-js', {
             removeItemButton: true,
@@ -77,6 +82,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         multiSelect.passedElement.element.addEventListener('change', updateClearButtonVisibility);
+    }
+
+    flatpickr("#dateRange", {
+        mode: "range",
+        dateFormat: "Y-m-d",
+        onClose: function(selectedDates, dateStr, instance) {
+            const dates = dateStr.split(" to ");
+            const startDate = dates[0]; // Начальная дата
+            const endDate = dates[1]; // Конечная дата
+
+            document.getElementById("dateRageStartDate").value = startDate;
+            document.getElementById("dateRageEndDate").value = endDate;
+        }
+    });
+    if (window.innerWidth < 1200 && document.querySelector('#dateRange')) {
+        let dateRange = document.querySelector('#dateRange');
+        let flatPickrRange = document.querySelector('.flatpickr-calendar.rangeMode');
+        flatPickrRange.style.width = dateRange.offsetWidth + 'px';
+
+        window.addEventListener('resize', function (event) {
+            let dateRange = document.querySelector('#dateRange');
+            let flatPickrRange = document.querySelector('.flatpickr-calendar.rangeMode');
+            flatPickrRange.style.width = dateRange.offsetWidth + 'px';
+        });
     }
 
 
@@ -137,5 +166,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 svgUseElement.setAttribute('href', isPassword ? '/images/icons/icons.svg#no-view' : '/images/icons/icons.svg#view');
             }
         });
+    });
+
+    const tabsButtons = document.querySelectorAll('.tabs_button');
+    function onTabClick(event) {
+        event.preventDefault();
+
+        const targetId = event.currentTarget.getAttribute('data-trigger');
+
+        document.querySelectorAll('.all-initiatives-wrap').forEach(block => {
+            block.style.display = 'none';
+        });
+
+        document.querySelector(targetId).style.display = 'block';
+
+        // tabsButtons.forEach(button => {
+        //     if(button === event.currentTarget) {
+        //         button.classList.add('active');
+        //     } else {
+        //         button.classList.remove('active');
+        //     }
+        // });
+    }
+
+    tabsButtons.forEach(button => {
+        button.addEventListener('click', onTabClick);
     });
 });

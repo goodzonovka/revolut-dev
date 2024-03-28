@@ -73,9 +73,14 @@ body:has(.table__additional-information) .table {
     }
 
     &__row {
+        position: relative;
         display: flex;
+        &:not(:has(.table__link)):hover {
+            background-color: $bg-color;
+        }
         &:not(.table__row-header) {
-            box-shadow: inset 0 1px $secondary-color;
+            //box-shadow: inset 0 1px $secondary-color;
+            border-top: 1px solid $secondary-color;
         }
         &-header {
             background-color: $bg-color;
@@ -85,7 +90,7 @@ body:has(.table__additional-information) .table {
 
     &__th, &__td {
        flex: 1;
-        padding: 16px 17px;
+        padding: 16px 17px 15px;
 
         font-weight: 400;
         line-height: 26px;
@@ -107,16 +112,28 @@ body:has(.table__additional-information) .table {
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        &:has(span) span {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        &:has(span) {
+            &:hover {
+                span {
+                    white-space: pre-wrap;
+                    overflow: visible;
+                    text-overflow: initial;
+                }
+            }
+            span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
         .icon-done {
             color: $main-color;
         }
         .icon-progress {
             color: $text-color-secondary;
+        }
+        &-assign-to-goal {
+            color: transparent;
         }
     }
     &__additional-information {
@@ -144,7 +161,7 @@ body:has(.table__additional-information) .table {
             letter-spacing: -.27px;
         }
     }
-    &__sort {
+    &__tabs {
         display: flex;
         align-items: center;
         background-color: #F2F2F3;
@@ -163,6 +180,19 @@ body:has(.table__additional-information) .table {
             &:last-child {
                 padding: 4px 11px;
             }
+        }
+    }
+    &__link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        &:hover ~ .table__td {
+            background-color: $bg-color;
+        }
+        &:hover ~ .table__td-assign-to-goal {
+            color: #727693;
         }
     }
     .status {
@@ -210,7 +240,7 @@ body:has(.table__additional-information) .table {
         }
     }
     @media (min-width: $ds) {
-        &__sort button:not(.active):hover, &-pagination__item:hover {
+        &__tabs button:not(.active):hover, &-pagination__item:hover {
             color: $main-color;
         }
     }
@@ -254,7 +284,7 @@ body:has(.table__additional-information) .table {
         }
     }
     @media (max-width: 359px) {
-        .table__sort button {
+        .table__tabs button {
             padding: 4px 11px;
             &:last-child {
                 padding: 4px 8px;

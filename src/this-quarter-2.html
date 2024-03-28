@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/components/head.html', {
-'title': 'All Initiatives'
+    'title': 'This Quarter 2'
 })
 <body>
 
 <div class="wrapper">
-    @@include('html/okta-integration/sidebar.html')
+    @@include('html/all-goals/sidebar.html')
 
     <div class="content">
 
@@ -22,11 +22,19 @@
 
         <ul class="breadcrumbs">
             <li>
-                All Initiatives
+                <a href="#">
+                    Goals
+                    <svg width="24" height="24">
+                        <use href="/images/icons/icons.svg#chevron-right"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                This Quarter
             </li>
         </ul>
 
-        @@include('html/all-initiatives-2/content.html')
+        @@include('html/this-quarter-2/content.html')
     </div>
 </div>
 

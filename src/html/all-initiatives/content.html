@@ -1,182 +1,513 @@
-<ul class="table__additional-information">
-    <li class="block icon-text">
-        <div class="icon-block">
-            <svg width="24" height="24">
-                <use href="/images/icons/icons.svg#file-fill"></use>
-            </svg>
-        </div>
-        <div>
-            <div class="text-small">Tracked Initiatives</div>
-            0
-        </div>
-    </li>
-    <li class="block icon-text">
-        <div class="icon-block">
-            <svg width="24" height="24">
-                <use href="/images/icons/icons.svg#fire"></use>
-            </svg>
-        </div>
-        <div>
-            <div class="text-small">Unassigned</div>
-            88
-        </div>
-    </li>
-</ul>
+<div id="unassigned" class="all-initiatives-wrap">
+    <ul class="table__additional-information">
+        <li class="block icon-text">
+            <div class="icon-block">
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#file-fill"></use>
+                </svg>
+            </div>
+            <div>
+                <div class="text-small">Tracked Initiatives</div>
+                0
+            </div>
+        </li>
+        <li class="block icon-text">
+            <div class="icon-block">
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#fire"></use>
+                </svg>
+            </div>
+            <div>
+                <div class="text-small">Unassigned</div>
+                88
+            </div>
+        </li>
+    </ul>
 
-<div class="block table">
-    <div class="table__top">
-        <div class="table__title">All Initiatives</div>
+    <div class="block table">
+        <div class="table__top">
+            <div class="table__title">All Initiatives</div>
 
-        <div class="table__sort">
-            <button>Tracked</button>
-            <button class="active">Unassigned</button>
+            <div class="table__tabs">
+                <button class="tabs_button" data-trigger="#tracked">Tracked</button>
+                <button class="tabs_button active" data-trigger="#unassigned">Unassigned</button>
+            </div>
+        </div>
+
+        <div class="table__scroll">
+            <div class="table__inner">
+                <div class="table__row table__row-header">
+                    <div class="table__th">
+                        Name
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th">
+                        Product
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th">
+                        Created
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th">
+                    </div>
+                    <div class="table__th">
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">Okta integration</div>
+                    <div class="table__td">Authentification</div>
+                    <div class="table__td">68 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">AI Expense assistant</div>
+                    <div class="table__td">Expenses</div>
+                    <div class="table__td">33 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">Vault new UI</div>
+                    <div class="table__td">Expenses</div>
+                    <div class="table__td">76 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">Cashback integration</div>
+                    <div class="table__td">Cashback</div>
+                    <div class="table__td">28 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">Shopify integrations</div>
+                    <div class="table__td">Integrations</div>
+                    <div class="table__td">8 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">AI HR bot</div>
+                    <div class="table__td">HR</div>
+                    <div class="table__td">14 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">New onboarding flow</div>
+                    <div class="table__td">Authentification</div>
+                    <div class="table__td">18 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">FAQ</div>
+                    <div class="table__td">Cashback</div>
+                    <div class="table__td">41 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">Open Banking integration</div>
+                    <div class="table__td">Paiements</div>
+                    <div class="table__td">7 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+
+                <div class="table__row">
+                    <a href="okta-integration.html" class="table__link"></a>
+                    <div class="table__td">Supplier portal</div>
+                    <div class="table__td">Suppliers</div>
+                    <div class="table__td">26 days ago</div>
+                    <div class="table__td">
+                        <div class="status status-1">Not tracked</div>
+                    </div>
+                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="table__scroll">
-        <div class="table__inner">
-            <div class="table__row table__row-header">
-                <div class="table__th">
-                    Name
-                    <svg width="24" height="24">
-                        <use href="/images/icons/icons.svg#chevron-down"></use>
-                    </svg>
-                </div>
-                <div class="table__th">
-                    Product
-                    <svg width="24" height="24">
-                        <use href="/images/icons/icons.svg#chevron-down"></use>
-                    </svg>
-                </div>
-                <div class="table__th">
-                    Created
-                    <svg width="24" height="24">
-                        <use href="/images/icons/icons.svg#chevron-down"></use>
-                    </svg>
-                </div>
-                <div class="table__th">
-                </div>
-                <div class="table__th">
-                </div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">Okta integration</div>
-                <div class="table__td">Authentification</div>
-                <div class="table__td">68 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">AI Expense assistant</div>
-                <div class="table__td">Expenses</div>
-                <div class="table__td">33 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">Vault new UI</div>
-                <div class="table__td">Expenses</div>
-                <div class="table__td">76 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">Cashback integration</div>
-                <div class="table__td">Cashback</div>
-                <div class="table__td">28 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">Shopify integrations</div>
-                <div class="table__td">Integrations</div>
-                <div class="table__td">8 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">AI HR bot</div>
-                <div class="table__td">HR</div>
-                <div class="table__td">14 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">New onboarding flow</div>
-                <div class="table__td">Authentification</div>
-                <div class="table__td">18 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">FAQ</div>
-                <div class="table__td">Cashback</div>
-                <div class="table__td">41 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">Open Banking integration</div>
-                <div class="table__td">Paiements</div>
-                <div class="table__td">7 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-
-            <div class="table__row">
-                <div class="table__td">Supplier portal</div>
-                <div class="table__td">Suppliers</div>
-                <div class="table__td">26 days ago</div>
-                <div class="table__td">
-                    <div class="status status-1">Not tracked</div>
-                </div>
-                <div class="table__td">assign to goal</div>
-            </div>
-        </div>
+    <div class="pagination">
+        <a href="#" class="pagination__item prev">
+            <svg width="24" height="24">
+                <use href="/images/icons/icons.svg#chevron-left"></use>
+            </svg>
+        </a>
+        <a href="#" class="pagination__item active">1</a>
+        <a href="#" class="pagination__item">2</a>
+        <a href="#" class="pagination__item">3</a>
+        <a href="#" class="pagination__item">4</a>
+        <a href="#" class="pagination__item">5</a>
+        <a href="#" class="pagination__item next">
+            <svg width="24" height="24">
+                <use href="/images/icons/icons.svg#chevron-right"></use>
+            </svg>
+        </a>
     </div>
 </div>
 
-<div class="pagination">
-    <a href="#" class="pagination__item prev">
-        <svg width="24" height="24">
-            <use href="/images/icons/icons.svg#chevron-left"></use>
-        </svg>
-    </a>
-    <a href="#" class="pagination__item active">1</a>
-    <a href="#" class="pagination__item">2</a>
-    <a href="#" class="pagination__item">3</a>
-    <a href="#" class="pagination__item">4</a>
-    <a href="#" class="pagination__item">5</a>
-    <a href="#" class="pagination__item next">
-        <svg width="24" height="24">
-            <use href="/images/icons/icons.svg#chevron-right"></use>
-        </svg>
-    </a>
+<div id="tracked" class="all-initiatives-wrap" style="display: none">
+    <ul class="table__additional-information">
+        <li class="block icon-text">
+            <div class="icon-block">
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#file-fill"></use>
+                </svg>
+            </div>
+            <div class="icon-block-right">
+                <div class="text-small">Tracked Initiatives</div>
+                10
+            </div>
+        </li>
+        <li class="block icon-text">
+            <div class="icon-block">
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#fire"></use>
+                </svg>
+            </div>
+            <div class="icon-block-right">
+                <div class="text-small">Unassigned</div>
+                8
+            </div>
+        </li>
+    </ul>
+
+    <div class="block table">
+        <div class="table__top">
+            <div class="table__title">All Initiatives</div>
+
+            <div class="table__tabs">
+                <button class="tabs_button active" data-trigger="#tracked">Tracked</button>
+                <button class="tabs_button" data-trigger="#unassigned">Unassigned</button>
+            </div>
+        </div>
+
+        <div class="table__scroll">
+            <div class="table__inner">
+                <div class="table__row table__row-header">
+                    <div class="table__th">
+                        Name
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th">
+                        Product
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th table__th-goal">
+                        Goal
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th table__th-created">
+                        Created
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th table__th-dev-status">
+                        Dev Status
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="table__th table__th-progress">
+                        Progress to Goal
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>Okta integration</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Authentification</span>
+                    </div>
+                    <div class="table__td table__td-goal">
+                        <div class="status status-4">Churn</div>
+                    </div>
+                    <div class="table__td table__td-created">68 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-2">Done</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">95.5%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:95.5%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>AI Expense assistant</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Expenses</span>
+                    </div>
+                    <div class="table__td">
+                        <div class="status status-4">User Growth</div>
+                    </div>
+                    <div class="table__td table__td-created">33 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-2">Done</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">52.3%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:52.3%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>Vault new UI</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Expenses</span>
+                    </div>
+                    <div class="table__td">
+                        <div class="status status-4">User Growth</div>
+                    </div>
+                    <div class="table__td table__td-created">76 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-2">Done</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">96.7%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:96.7%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>Cashback integration</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Cashback</span>
+                    </div>
+                    <div class="table__td">
+                        <div class="status status-4">User Growth</div>
+                    </div>
+                    <div class="table__td table__td-created">28 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-3">Started</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">44.5%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:44.5%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>Shopify integrations</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Integrations</span>
+                    </div>
+                    <div class="table__td table__td-goal">
+                        <div class="status status-4">Churn</div>
+                    </div>
+                    <div class="table__td table__td-created">8 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-2">Done</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">84.5%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:84.5%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>AI HR bot</span>
+                    </div>
+                    <div class="table__td">
+                        <span>HR</span>
+                    </div>
+                    <div class="table__td">
+                        <div class="status status-4">ARR growth</div>
+                    </div>
+                    <div class="table__td table__td-created">14 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-3">Started</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">6.3%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:6.3%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>New onboarding flow</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Authentification</span>
+                    </div>
+                    <div class="table__td table__td-goal">
+                        <div class="status status-4">Churn</div>
+                    </div>
+                    <div class="table__td table__td-created">18 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-1">To start</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">21.2%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:21.2%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>FAQ</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Cashback</span>
+                    </div>
+                    <div class="table__td">
+                        <div class="status status-4">User Growth</div>
+                    </div>
+                    <div class="table__td table__td-created">41 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-2">Done</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">72.2%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:72.2%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>Open Banking integration</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Payments</span>
+                    </div>
+                    <div class="table__td table__td-goal">
+                        <div class="status status-4">Churn</div>
+                    </div>
+                    <div class="table__td table__td-created">7 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-1">To start</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">9.7%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:9.7%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table__row">
+                    <div class="table__td">
+                        <span>Supplier portal</span>
+                    </div>
+                    <div class="table__td">
+                        <span>Suppliers</span>
+                    </div>
+                    <div class="table__td table__td-goal">
+                        <div class="status status-4">Churn</div>
+                    </div>
+                    <div class="table__td table__td-created">26 days ago</div>
+                    <div class="table__td table__td-dev-status">
+                        <div class="status status-2">Done</div>
+                    </div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">5.1%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:5.1%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="pagination__item prev">
+            <svg width="24" height="24">
+                <use href="/images/icons/icons.svg#chevron-left"></use>
+            </svg>
+        </a>
+        <a href="#" class="pagination__item active">1</a>
+        <a href="#" class="pagination__item">2</a>
+        <a href="#" class="pagination__item">3</a>
+        <a href="#" class="pagination__item">4</a>
+        <a href="#" class="pagination__item">5</a>
+        <a href="#" class="pagination__item next">
+            <svg width="24" height="24">
+                <use href="/images/icons/icons.svg#chevron-right"></use>
+            </svg>
+        </a>
+    </div>
 </div>
