@@ -3,6 +3,11 @@ body:has(.table__additional-information) .table {
 }
 .table {
     margin-top: 1rem;
+    &.table-view-1 {
+        .table__th, .table__td {
+            width: 20%;
+        }
+    }
     &.table-view-2 {
         .progress {
             flex-grow: 0;
@@ -25,9 +30,14 @@ body:has(.table__additional-information) .table {
             }
         }
         .table__td {
-            &-dev-status, &-progress {
+            &-progress {
                 justify-content: center;
             }
+        }
+    }
+    &.table-view-3 {
+        .table__th, .table__td {
+            width: 16.66%;
         }
     }
     &:has(.table__td-goal) {
@@ -112,19 +122,15 @@ body:has(.table__additional-information) .table {
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        &:has(span) {
-            &:hover {
-                span {
-                    white-space: pre-wrap;
-                    overflow: visible;
-                    text-overflow: initial;
-                }
-            }
-            span {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+        &:has(.table__td-name) {
+            position: relative;
+        }
+        &-name {
+            display: inline-block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .icon-done {
             color: $main-color;
@@ -167,7 +173,7 @@ body:has(.table__additional-information) .table {
         background-color: #F2F2F3;
         border-radius: 60px;
         button {
-            padding: 4px 19px;
+            padding: 9px 19px 10px;
             font-size: 10px;
             line-height: 20px;
             font-family: "DM Sans", sans-serif;
@@ -178,7 +184,7 @@ body:has(.table__additional-information) .table {
                 background-color: $secondary-color;
             }
             &:last-child {
-                padding: 4px 11px;
+                padding: 9px 11px 10px;
             }
         }
     }

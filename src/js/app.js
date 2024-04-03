@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let editors = document.querySelectorAll('.editor');
     if (editors) {
         editors.forEach(function (el, index) {
-            var editor = ace.edit(el);
+            let editor = ace.edit(el);
             editor.session.setMode("ace/mode/sql");
             editor.setTheme("ace/theme/tomorrow_night_blue");
             if (window.innerWidth < 359) {
@@ -191,5 +191,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     tabsButtons.forEach(button => {
         button.addEventListener('click', onTabClick);
+    });
+
+    // Добавление тултипа ко всем ячейкам первого столбца
+    let tableCells = document.querySelectorAll('.table__row .table__td:has(.table__td-name)');
+
+    tableCells.forEach(function(cell) {
+        // Создаем обертку тултипа и текст тултипа
+        let tooltipSpan = document.createElement('span');
+        tooltipSpan.classList.add('tooltiptext');
+        tooltipSpan.textContent = cell.textContent;
+
+        // Обертываем содержимое ячейки в div с классом tooltip
+        let tooltipDiv = document.createElement('div');
+        tooltipDiv.classList.add('tooltip');
+
+        while (cell.firstChild) {
+            tooltipDiv.appendChild(cell.firstChild); // Перемещаем содержимое ячейки в тултип
+        }
+
+        cell.appendChild(tooltipDiv);
+        tooltipDiv.appendChild(tooltipSpan); // Добавляем текст тултипа
     });
 });

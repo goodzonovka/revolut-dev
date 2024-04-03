@@ -403,6 +403,12 @@
     }
 }
 
+@media (min-width: $th) {
+    .quarter .table__inner {
+        min-width: auto;
+    }
+}
+
 @media (min-width: $ds) {
     .tracked-initiatives-sidebar {
         &__open, &__close {
