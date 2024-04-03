@@ -126,11 +126,16 @@ body:has(.table__additional-information) .table {
             position: relative;
         }
         &-name {
-            display: inline-block;
-            width: 100%;
+            white-space: nowrap;
+            display: inline;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            &.trim {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
         .icon-done {
             color: $main-color;

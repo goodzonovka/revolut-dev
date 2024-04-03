@@ -382,6 +382,13 @@
     }
 }
 
+.all-initiatives-wrap:not(.active) {
+    height: 0;
+    padding: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
 @media (min-width: $tv) and (max-width: 991px) {
     .content {
         padding: 23px 16px 23px 236px;
