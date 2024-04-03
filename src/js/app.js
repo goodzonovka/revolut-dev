@@ -193,6 +193,10 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', onTabClick);
     });
 
+
+});
+
+window.onload = function () {
     // Добавление тултипа ко всем ячейкам первого столбца
     let tableCells = document.querySelectorAll('.table__row .table__td:has(.table__td-name)');
 
@@ -215,28 +219,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Находим все элементы с классом table__td-name
-    var elements = document.querySelectorAll('.table__td-name');
+    // setTimeout(function () {
+        // Находим все элементы с классом table__td-name
+        var elements = document.querySelectorAll('.table__td-name');
 
-    elements.forEach(function(element) {
-        var parent = element.parentElement;
+        elements.forEach(function (element) {
+            var parent = element.parentElement;
 
-        const rectP = parent.getBoundingClientRect();
-        const widthP = rectP.width; // Точная ширина элемента
+            const rectP = parent.getBoundingClientRect();
+            const widthP = rectP.width; // Точная ширина элемента
 
-        const rect = element.getBoundingClientRect();
-        const width = rect.width; // Точная ширина элемента
+            const rect = element.getBoundingClientRect();
+            const width = rect.width; // Точная ширина элемента
 
-        // Проверяем, обрезается ли текст
-        if (width > widthP) {
-            // Если текст обрезается, добавляем класс overflowing
-            element.classList.add('overflowing');
-            element.classList.remove('not-overflowing');
-        } else {
-            // Если текст не обрезается, добавляем класс not-overflowing
-            element.classList.add('not-overflowing');
-            element.classList.remove('overflowing');
-        }
-        element.classList.add('trim');
-    });
-});
+            // Проверяем, обрезается ли текст
+            if (width > widthP) {
+                // Если текст обрезается, добавляем класс overflowing
+                element.classList.add('overflowing');
+                element.classList.remove('not-overflowing');
+            } else {
+                // Если текст не обрезается, добавляем класс not-overflowing
+                element.classList.add('not-overflowing');
+                element.classList.remove('overflowing');
+            }
+            element.classList.add('trim');
+        });
+    // }, 1000);
+}
