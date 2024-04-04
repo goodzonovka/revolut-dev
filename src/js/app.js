@@ -117,12 +117,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    let editors = document.querySelectorAll('.editor');
+    let editors = document.querySelectorAll('.editor-js');
     if (editors) {
         editors.forEach(function (el, index) {
             let editor = ace.edit(el);
             editor.session.setMode("ace/mode/sql");
             editor.setTheme("ace/theme/tomorrow_night_blue");
+            if (window.innerWidth < 359) {
+                editor.setFontSize(12);
+            } else if (window.innerWidth < 768) {
+                editor.setFontSize(14);
+            } else {
+                editor.setFontSize(16);
+            }
+        });
+    }
+
+    let editorsReadonly = document.querySelectorAll('.editor-readonly-js');
+    if (editorsReadonly) {
+        editorsReadonly.forEach(function (el, index) {
+            let editor = ace.edit(el);
+            editor.session.setMode("ace/mode/sql");
+            editor.setTheme("ace/theme/tomorrow_night_blue");
+            editor.setReadOnly(true);
             if (window.innerWidth < 359) {
                 editor.setFontSize(12);
             } else if (window.innerWidth < 768) {
@@ -219,30 +236,27 @@ window.onload = function () {
     });
 
 
-    // setTimeout(function () {
-        // Находим все элементы с классом table__td-name
-        var elements = document.querySelectorAll('.table__td-name');
+    let elements = document.querySelectorAll('.table__td-name');
 
-        elements.forEach(function (element) {
-            var parent = element.parentElement;
+    elements.forEach(function (element) {
+        let parent = element.parentElement;
 
-            const rectP = parent.getBoundingClientRect();
-            const widthP = rectP.width; // Точная ширина элемента
+        const rectP = parent.getBoundingClientRect();
+        const widthP = rectP.width; // Точная ширина элемента
 
-            const rect = element.getBoundingClientRect();
-            const width = rect.width; // Точная ширина элемента
+        const rect = element.getBoundingClientRect();
+        const width = rect.width; // Точная ширина элемента
 
-            // Проверяем, обрезается ли текст
-            if (width > widthP) {
-                // Если текст обрезается, добавляем класс overflowing
-                element.classList.add('overflowing');
-                element.classList.remove('not-overflowing');
-            } else {
-                // Если текст не обрезается, добавляем класс not-overflowing
-                element.classList.add('not-overflowing');
-                element.classList.remove('overflowing');
-            }
-            element.classList.add('trim');
-        });
-    // }, 1000);
+        // Проверяем, обрезается ли текст
+        if (width > widthP) {
+            // Если текст обрезается, добавляем класс overflowing
+            element.classList.add('overflowing');
+            element.classList.remove('not-overflowing');
+        } else {
+            // Если текст не обрезается, добавляем класс not-overflowing
+            element.classList.add('not-overflowing');
+            element.classList.remove('overflowing');
+        }
+        element.classList.add('trim');
+    });
 }
