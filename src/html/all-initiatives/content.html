@@ -1,513 +1,422 @@
-<div id="unassigned" class="all-initiatives-wrap">
-    <ul class="table__additional-information">
-        <li class="block icon-text">
-            <div class="icon-block">
-                <svg width="24" height="24">
-                    <use href="/images/icons/icons.svg#file-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <div class="text-small">Tracked Initiatives</div>
-                0
-            </div>
-        </li>
-        <li class="block icon-text">
-            <div class="icon-block">
-                <svg width="24" height="24">
-                    <use href="/images/icons/icons.svg#fire"></use>
-                </svg>
-            </div>
-            <div>
-                <div class="text-small">Unassigned</div>
-                88
-            </div>
-        </li>
-    </ul>
+<div class="block table table-view-3">
+    <div class="table__top">
+        @@include('filter.html')
+    </div>
 
-    <div class="block table table-view-1">
-        <div class="table__top">
-            <div class="table__title">All Initiatives</div>
-
-            <div class="table__tabs">
-                <button class="tabs_button" data-trigger="#tracked">Tracked</button>
-                <button class="tabs_button active" data-trigger="#unassigned">Unassigned</button>
+    <div class="table__scroll">
+        <div class="table__inner">
+            <div class="table__row table__row-header">
+                <div class="table__th">
+                    Select
+                </div>
+                <div class="table__th">
+                    Name
+                    <svg width="16" height="16">
+                        <use href="/images/icons/icons.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="table__th">
+                    Product
+                    <svg width="16" height="16">
+                        <use href="/images/icons/icons.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="table__th">
+                    Created
+                    <svg width="16" height="16">
+                        <use href="/images/icons/icons.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="table__th">
+                    Goal
+                </div>
+                <div class="table__th">
+                    Status
+                </div>
+                <div class="table__th">
+                    Progress to Goal
+                    <svg width="16" height="16">
+                        <use href="/images/icons/icons.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="table__th">
+                    Epic
+                    <svg width="16" height="16">
+                        <use href="/images/icons/icons.svg#arrow-down"></use>
+                    </svg>
+                </div>
+                <div class="table__th"></div>
             </div>
-        </div>
 
-        <div class="table__scroll">
-            <div class="table__inner">
-                <div class="table__row table__row-header">
-                    <div class="table__th">
-                        Name
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
+            <div class="table__row table__row-group">
+                <div class="table__row-group-parent">
+                    <div class="table__td"></div>
+                    <div class="table__td">
+                        <button class="table__show-group">
+                            Group: Onboarding
+                        </button>
+                    </div>
+                    <div class="table__td"></div>
+                    <div class="table__td"></div>
+                    <div class="table__td">
+                        <div class="status status-4">Churn</div>
+                        <div class="status status-6">ARR</div>
+                    </div>
+                    <div class="table__td"></div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">55%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:55%"></div>
+                        </div>
+                    </div>
+                    <div class="table__td"></div>
+                    <div class="table__td">
+                        <button class="table__dots">
+                            <svg width="2" height="12">
+                                <use href="/images/icons/icons.svg#dots-vertical"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="table__row-group-childs">
+                    <div class="table__row">
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <span class="table__td-name">Okta integration</span>
+                        </div>
+                        <div class="table__td">Onboarding</div>
+                        <div class="table__td">68 days ago</div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <div class="status status-2">Done</div>
+                        </div>
+                        <div class="table__td table__td-progress"></div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <button class="table__dots">
+                                <svg width="2" height="12">
+                                    <use href="/images/icons/icons.svg#dots-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <span class="table__td-name">Vault new UI</span>
+                        </div>
+                        <div class="table__td">Onboarding</div>
+                        <div class="table__td">68 days ago</div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <div class="status status-3">Started</div>
+                        </div>
+                        <div class="table__td table__td-progress"></div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <button class="table__dots">
+                                <svg width="2" height="12">
+                                    <use href="/images/icons/icons.svg#dots-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <span class="table__td-name">Supplier portal</span>
+                        </div>
+                        <div class="table__td">Cashback</div>
+                        <div class="table__td">68 days ago</div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <div class="status status-1">To Start</div>
+                        </div>
+                        <div class="table__td table__td-progress"></div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <button class="table__dots">
+                                <svg width="2" height="12">
+                                    <use href="/images/icons/icons.svg#dots-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table__row table__row-group">
+                <div class="table__row-group-parent">
+                    <div class="table__td"></div>
+                    <div class="table__td">
+                        <button class="table__show-group">
+                            Group: US Expansion
+                        </button>
+                    </div>
+                    <div class="table__td"></div>
+                    <div class="table__td"></div>
+                    <div class="table__td">
+                        <div class="status status-4">ARR</div>
+                    </div>
+                    <div class="table__td"></div>
+                    <div class="table__td table__td-progress">
+                        <div class="progress__value">15%</div>
+                        <div class="progress">
+                            <div class="progress__active" style="width:15%"></div>
+                        </div>
+                    </div>
+                    <div class="table__td"></div>
+                    <div class="table__td">
+                        <button class="table__dots">
+                            <svg width="2" height="12">
+                                <use href="/images/icons/icons.svg#dots-vertical"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="table__row-group-childs">
+                    <div class="table__row">
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <span class="table__td-name">Okta integration</span>
+                        </div>
+                        <div class="table__td">Onboarding</div>
+                        <div class="table__td">68 days ago</div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <div class="status status-2">Done</div>
+                        </div>
+                        <div class="table__td table__td-progress"></div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <button class="table__dots">
+                                <svg width="2" height="12">
+                                    <use href="/images/icons/icons.svg#dots-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <span class="table__td-name">Vault new UI</span>
+                        </div>
+                        <div class="table__td">Onboarding</div>
+                        <div class="table__td">68 days ago</div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <div class="status status-3">Started</div>
+                        </div>
+                        <div class="table__td table__td-progress"></div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <button class="table__dots">
+                                <svg width="2" height="12">
+                                    <use href="/images/icons/icons.svg#dots-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <span class="table__td-name">Supplier portal</span>
+                        </div>
+                        <div class="table__td">Cashback</div>
+                        <div class="table__td">68 days ago</div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <div class="status status-1">To Start</div>
+                        </div>
+                        <div class="table__td table__td-progress"></div>
+                        <div class="table__td"></div>
+                        <div class="table__td">
+                            <button class="table__dots">
+                                <svg width="2" height="12">
+                                    <use href="/images/icons/icons.svg#dots-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table__row">
+                <div class="table__td">
+                    <label class="checkbox">
+                        <input type="checkbox" class="table__checkbox">
+                        <span class="checkbox__icon"></span>
+                    </label>
+                </div>
+                <div class="table__td">
+                    <span class="table__td-name">Cashback integration</span>
+                </div>
+                <div class="table__td">Cashback</div>
+                <div class="table__td">68 days ago</div>
+                <div class="table__td">
+                    <div class="status status-4">User</div>
+                </div>
+                <div class="table__td">
+                    <div class="status status-2">Done</div>
+                </div>
+                <div class="table__td table__td-progress">
+                    <div class="progress__value">60%</div>
+                    <div class="progress">
+                        <div class="progress__active" style="width:60%"></div>
+                    </div>
+                </div>
+                <div class="table__td"></div>
+                <div class="table__td">
+                    <button class="table__dots">
+                        <svg width="2" height="12">
+                            <use href="/images/icons/icons.svg#dots-vertical"></use>
                         </svg>
-                    </div>
-                    <div class="table__th">
-                        Product
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                    <div class="table__th">
-                        Created
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                    <div class="table__th">
-                    </div>
-                    <div class="table__th">
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">Okta integration</span>
-                    </div>
-                    <div class="table__td">Authentification</div>
-                    <div class="table__td">68 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">AI Expense assistant</span>
-                    </div>
-                    <div class="table__td">Expenses</div>
-                    <div class="table__td">33 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">Vault new UI</span>
-                    </div>
-                    <div class="table__td">Expenses</div>
-                    <div class="table__td">76 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">Cashback integration</span>
-                    </div>
-                    <div class="table__td">Cashback</div>
-                    <div class="table__td">28 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">Shopify integrations</span>
-                    </div>
-                    <div class="table__td">Integrations</div>
-                    <div class="table__td">8 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">AI HR bot</span>
-                    </div>
-                    <div class="table__td">HR</div>
-                    <div class="table__td">14 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">New onboarding flow</span>
-                    </div>
-                    <div class="table__td">Authentification</div>
-                    <div class="table__td">18 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">FAQ</span>
-                    </div>
-                    <div class="table__td">Cashback</div>
-                    <div class="table__td">41 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">Open Banking integration</span>
-                    </div>
-                    <div class="table__td">Paiements</div>
-                    <div class="table__td">7 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
-                </div>
-
-                <div class="table__row">
-                    <a href="okta-integration.html" class="table__link"></a>
-                    <div class="table__td">
-                        <span class="table__td-name">Supplier portal</span>
-                    </div>
-                    <div class="table__td">Suppliers</div>
-                    <div class="table__td">26 days ago</div>
-                    <div class="table__td">
-                        <div class="status status-1">Not tracked</div>
-                    </div>
-                    <div class="table__td table__td-assign-to-goal">assign to goal</div>
+                    </button>
                 </div>
             </div>
+
+            <div class="table__row">
+                <div class="table__td">
+                    <label class="checkbox">
+                        <input type="checkbox" class="table__checkbox">
+                        <span class="checkbox__icon"></span>
+                    </label>
+                </div>
+                <div class="table__td">
+                    <span class="table__td-name">Cashback FAQ</span>
+                </div>
+                <div class="table__td">Cashback</div>
+                <div class="table__td">68 days ago</div>
+                <div class="table__td">
+                    <div class="status status-4">User</div>
+                </div>
+                <div class="table__td">
+                    <div class="status status-2">Done</div>
+                </div>
+                <div class="table__td table__td-progress">
+                    <div class="progress__value">60%</div>
+                    <div class="progress">
+                        <div class="progress__active" style="width:60%"></div>
+                    </div>
+                </div>
+                <div class="table__td"></div>
+                <div class="table__td">
+                    <button class="table__dots">
+                        <svg width="2" height="12">
+                            <use href="/images/icons/icons.svg#dots-vertical"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table__row">
+                <div class="table__td">
+                    <label class="checkbox">
+                        <input type="checkbox" class="table__checkbox">
+                        <span class="checkbox__icon"></span>
+                    </label>
+                </div>
+                <div class="table__td">
+                    <span class="table__td-name">Lorem ipsum dolor sit</span>
+                </div>
+                <div class="table__td">Suppliers</div>
+                <div class="table__td">68 days ago</div>
+                <div class="table__td">
+                    <div class="status status-4">User</div>
+                </div>
+                <div class="table__td">
+                    <div class="status status-3">Started</div>
+                </div>
+                <div class="table__td table__td-progress">
+                    <div class="progress__value">60%</div>
+                    <div class="progress">
+                        <div class="progress__active" style="width:60%"></div>
+                    </div>
+                </div>
+                <div class="table__td"></div>
+                <div class="table__td">
+                    <button class="table__dots">
+                        <svg width="2" height="12">
+                            <use href="/images/icons/icons.svg#dots-vertical"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table__row">
+                <div class="table__td">
+                    <label class="checkbox">
+                        <input type="checkbox" class="table__checkbox">
+                        <span class="checkbox__icon"></span>
+                    </label>
+                </div>
+                <div class="table__td">
+                    <span class="table__td-name">Open Banking integ</span>
+                </div>
+                <div class="table__td">Payments</div>
+                <div class="table__td">68 days ago</div>
+                <div class="table__td">
+                    <div class="status status-4">User</div>
+                </div>
+                <div class="table__td">
+                    <div class="status status-1">To Start</div>
+                </div>
+                <div class="table__td table__td-progress">
+                    <div class="progress__value">0%</div>
+                    <div class="progress">
+                        <div class="progress__active" style="width:0"></div>
+                    </div>
+                </div>
+                <div class="table__td"></div>
+                <div class="table__td">
+                    <button class="table__dots">
+                        <svg width="2" height="12">
+                            <use href="/images/icons/icons.svg#dots-vertical"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table__row">
+                <div class="table__td">
+                    <label class="checkbox">
+                        <input type="checkbox" class="table__checkbox">
+                        <span class="checkbox__icon"></span>
+                    </label>
+                </div>
+                <div class="table__td">
+                    <span class="table__td-name">Shopify integra..</span>
+                </div>
+                <div class="table__td">Payments</div>
+                <div class="table__td">68 days ago</div>
+                <div class="table__td">
+                </div>
+                <div class="table__td">
+                    <div class="status status-5">Not Tracked</div>
+                </div>
+                <div class="table__td table__td-progress">
+
+                </div>
+                <div class="table__td"></div>
+                <div class="table__td">
+                    <button class="table__dots">
+                        <svg width="2" height="12">
+                            <use href="/images/icons/icons.svg#dots-vertical"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="pagination">
-        <a href="#" class="pagination__item prev">
-            <svg width="24" height="24">
-                <use href="/images/icons/icons.svg#chevron-left"></use>
-            </svg>
-        </a>
-        <a href="#" class="pagination__item active">1</a>
-        <a href="#" class="pagination__item">2</a>
-        <a href="#" class="pagination__item">3</a>
-        <a href="#" class="pagination__item">4</a>
-        <a href="#" class="pagination__item">5</a>
-        <a href="#" class="pagination__item next">
-            <svg width="24" height="24">
-                <use href="/images/icons/icons.svg#chevron-right"></use>
-            </svg>
-        </a>
-    </div>
-</div>
-
-<div id="tracked" class="all-initiatives-wrap active">
-    <ul class="table__additional-information">
-        <li class="block icon-text">
-            <div class="icon-block">
-                <svg width="24" height="24">
-                    <use href="/images/icons/icons.svg#file-fill"></use>
-                </svg>
-            </div>
-            <div class="icon-block-right">
-                <div class="text-small">Tracked Initiatives</div>
-                10
-            </div>
-        </li>
-        <li class="block icon-text">
-            <div class="icon-block">
-                <svg width="24" height="24">
-                    <use href="/images/icons/icons.svg#fire"></use>
-                </svg>
-            </div>
-            <div class="icon-block-right">
-                <div class="text-small">Unassigned</div>
-                8
-            </div>
-        </li>
-    </ul>
-
-    <div class="block table table-view-3">
-        <div class="table__top">
-            <div class="table__title">All Initiatives</div>
-
-            <div class="table__tabs">
-                <button class="tabs_button active" data-trigger="#tracked">Tracked</button>
-                <button class="tabs_button" data-trigger="#unassigned">Unassigned</button>
-            </div>
+    <div class="table__bottom">
+        <div class="table__selected">
+            <span id="selected-count"></span> Selected
         </div>
 
-        <div class="table__scroll">
-            <div class="table__inner">
-                <div class="table__row table__row-header">
-                    <div class="table__th">
-                        Name
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                    <div class="table__th">
-                        Product
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                    <div class="table__th table__th-goal">
-                        Goal
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                    <div class="table__th table__th-created">
-                        Created
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                    <div class="table__th table__th-dev-status">
-                        Dev Status
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                    <div class="table__th table__th-progress">
-                        Progress to Goal
-                        <svg width="24" height="24">
-                            <use href="/images/icons/icons.svg#chevron-down"></use>
-                        </svg>
-                    </div>
-                </div>
+        <button id="show-input-group-name" class="table__group">Group</button>
 
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">Okta integration</span>
-                    </div>
-                    <div class="table__td">Authentification</div>
-                    <div class="table__td table__td-goal">
-                        <div class="status status-4">Churn</div>
-                    </div>
-                    <div class="table__td table__td-created">68 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-2">Done</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">95.5%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:95.5%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">AI Expense assistant</span>
-                    </div>
-                    <div class="table__td">Expenses</div>
-                    <div class="table__td">
-                        <div class="status status-4">User Growth</div>
-                    </div>
-                    <div class="table__td table__td-created">33 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-2">Done</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">52.3%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:52.3%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">Vault new UI</span>
-                    </div>
-                    <div class="table__td">Expenses</div>
-                    <div class="table__td">
-                        <div class="status status-4">User Growth</div>
-                    </div>
-                    <div class="table__td table__td-created">76 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-2">Done</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">96.7%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:96.7%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">Cashback integration</span>
-                    </div>
-                    <div class="table__td">Cashback</div>
-                    <div class="table__td">
-                        <div class="status status-4">User Growth</div>
-                    </div>
-                    <div class="table__td table__td-created">28 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-3">Started</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">44.5%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:44.5%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">Shopify integrations</span>
-                    </div>
-                    <div class="table__td">Integrations</div>
-                    <div class="table__td table__td-goal">
-                        <div class="status status-4">Churn</div>
-                    </div>
-                    <div class="table__td table__td-created">8 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-2">Done</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">84.5%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:84.5%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">AI HR bot</span>
-                    </div>
-                    <div class="table__td">HR</div>
-                    <div class="table__td">
-                        <div class="status status-4">ARR growth</div>
-                    </div>
-                    <div class="table__td table__td-created">14 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-3">Started</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">6.3%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:6.3%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">New onboarding flow</span>
-                    </div>
-                    <div class="table__td">Authentification</div>
-                    <div class="table__td table__td-goal">
-                        <div class="status status-4">Churn</div>
-                    </div>
-                    <div class="table__td table__td-created">18 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-1">To start</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">21.2%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:21.2%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">FAQ</span>
-                    </div>
-                    <div class="table__td">Cashback</div>
-                    <div class="table__td">
-                        <div class="status status-4">User Growth</div>
-                    </div>
-                    <div class="table__td table__td-created">41 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-2">Done</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">72.2%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:72.2%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">Open Banking integration</span>
-                    </div>
-                    <div class="table__td">Payments</div>
-                    <div class="table__td table__td-goal">
-                        <div class="status status-4">Churn</div>
-                    </div>
-                    <div class="table__td table__td-created">7 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-1">To start</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">9.7%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:9.7%"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="table__row">
-                    <div class="table__td">
-                        <span class="table__td-name">Supplier portal</span>
-                    </div>
-                    <div class="table__td">Suppliers</div>
-                    <div class="table__td table__td-goal">
-                        <div class="status status-4">Churn</div>
-                    </div>
-                    <div class="table__td table__td-created">26 days ago</div>
-                    <div class="table__td table__td-dev-status">
-                        <div class="status status-2">Done</div>
-                    </div>
-                    <div class="table__td table__td-progress">
-                        <div class="progress__value">5.1%</div>
-                        <div class="progress">
-                            <div class="progress__active" style="width:5.1%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="pagination">
-        <a href="#" class="pagination__item prev">
-            <svg width="24" height="24">
-                <use href="/images/icons/icons.svg#chevron-left"></use>
-            </svg>
-        </a>
-        <a href="#" class="pagination__item active">1</a>
-        <a href="#" class="pagination__item">2</a>
-        <a href="#" class="pagination__item">3</a>
-        <a href="#" class="pagination__item">4</a>
-        <a href="#" class="pagination__item">5</a>
-        <a href="#" class="pagination__item next">
-            <svg width="24" height="24">
-                <use href="/images/icons/icons.svg#chevron-right"></use>
-            </svg>
-        </a>
+        <input type="text" id="input-group-name" class="table__input-group-name" placeholder="Group Name">
     </div>
 </div>

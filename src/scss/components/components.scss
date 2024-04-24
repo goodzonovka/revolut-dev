@@ -67,8 +67,19 @@
     position: relative;
 }
 
+.block-goals {
+    display: flex;
+    flex-direction: column;
+}
+
 .chart-demo {
     margin-top: 1rem;
+    position: relative;
+    flex-grow: 1;
+    margin-left: -8px;
+    margin-right: -8px;
+    //width: 325px;
+    //height: 214px;
 }
 .chart-demo, .calendar-demo {
     img {

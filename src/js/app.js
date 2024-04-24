@@ -1,4 +1,5 @@
 import './choices.js';
+import './chart.js';
 
 /* проверка на поддержку webp формата */
 import BaseHelpers from './helpers/BaseHelpers.js';
@@ -185,32 +186,147 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const tabsButtons = document.querySelectorAll('.tabs_button');
-    function onTabClick(event) {
-        event.preventDefault();
+    const groupButtons = document.querySelectorAll('.table__show-group');
 
-        const targetId = event.currentTarget.getAttribute('data-trigger');
+    // Добавляем обработчик событий для каждой кнопки
+    groupButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Поиск ближайшего родительского элемента с классом .table__row-group
+            const groupRow = button.closest('.table__row-group');
 
-        document.querySelectorAll('.all-initiatives-wrap').forEach(block => {
-            block.classList.remove('active');
+            // Переключение класса .active
+            groupRow.classList.toggle('active');
         });
-
-        document.querySelector(targetId).classList.add('active');
-
-        // tabsButtons.forEach(button => {
-        //     if(button === event.currentTarget) {
-        //         button.classList.add('active');
-        //     } else {
-        //         button.classList.remove('active');
-        //     }
-        // });
-    }
-
-    tabsButtons.forEach(button => {
-        button.addEventListener('click', onTabClick);
     });
 
+    const filterButton = document.getElementById('table-filter-btn');
 
+    const filterList = document.getElementById('table-filter-list');
+
+    if (filterButton) {
+        filterButton.addEventListener('click', function() {
+            filterList.classList.toggle('active');
+        });
+    }
+
+    const radioButtons = document.querySelectorAll('.table-filter-selected input[type="radio"]');
+
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.checked) {
+                const filterContainer = this.closest('.table-filter-selected');
+
+                const currentValueDisplay = filterContainer.querySelector('.table-filter-selected__current-value');
+
+                currentValueDisplay.textContent = this.value;
+            }
+        });
+    });
+
+    const selectedItems = document.querySelectorAll('.table-filter-selected__item');
+
+    selectedItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const filterContainer = this.closest('.table-filter-selected');
+
+            const list = filterContainer.querySelector('.table-filter__list');
+
+            list.classList.toggle('active');
+
+            const allLists = document.querySelectorAll('.table-filter__list')
+
+            allLists.forEach(otherList => {
+                if (otherList !== list) {
+                    otherList.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    const filterItems = document.querySelectorAll('#table-filter-list .table-filter__item');
+
+    // Добавляем обработчик событий на клик для каждого элемента
+    filterItems.forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.toggle('active');
+
+            const targetId = this.getAttribute('data-target');
+
+            const targetElement = document.querySelector(targetId);
+
+            targetElement.classList.toggle('active');
+        });
+    });
+
+    const removeButtons = document.querySelectorAll('.table-filter-selected__remove');
+
+    removeButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.stopPropagation();
+
+            const filterSelected = this.closest('.table-filter-selected');
+
+            filterSelected.classList.remove('active');
+
+            const targetId = filterSelected.id;
+
+            const relatedItem = document.querySelector(`.table-filter__item[data-target="#${targetId}"]`);
+
+            if (relatedItem) {
+                relatedItem.classList.remove('active');
+            }
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (filterButton) {
+            if (!filterButton.contains(event.target) && !filterList.contains(event.target)) {
+                filterList.classList.remove('active');
+            }
+        }
+
+        if (!event.target.closest('.table-filter-selected .table-filter-selected__item') && !event.target.closest('.table-filter-selected .table-filter__list')) {
+            const lists = document.querySelectorAll('.table-filter-selected .table-filter__list');
+            lists.forEach(list => {
+                list.classList.remove('active');
+            });
+        }
+    });
+
+    // Функция для подсчета и отображения количества выбранных чекбоксов
+    function updateSelectedCount() {
+        const checkboxes = document.querySelectorAll('.table__checkbox');
+        const selectedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+        const countDisplay = document.getElementById('selected-count');
+
+        if (checkboxes.length) {
+            countDisplay.textContent = selectedCount;
+        }
+    }
+
+    const checkboxes = document.querySelectorAll('.table__checkbox');
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateSelectedCount);
+    });
+
+    updateSelectedCount();
+
+    const showInputGroupName = document.getElementById('show-input-group-name');
+
+    const inputGroupName = document.getElementById('input-group-name');
+
+    if (inputGroupName) {
+        inputGroupName.style.display = 'none';
+
+        showInputGroupName.addEventListener('click', function () {
+            if (inputGroupName.style.display === 'none') {
+                inputGroupName.style.display = 'block';
+            } else {
+                inputGroupName.style.display = 'none';
+            }
+        });
+    }
 });
 
 window.onload = function () {
