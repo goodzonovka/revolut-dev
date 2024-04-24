@@ -14,19 +14,12 @@
             </div>
 
             <div class="block-goals__circle">
-                <svg width="68" height="68" viewBox="0 0 68 68">
-                    <!-- Фоновый круг -->
+                <svg class="circle-percent-js no-goals" width="68" height="68" viewBox="0 0 68 68" data-percent="75" style="display: none">
                     <circle cx="34" cy="34" r="32" stroke="#EFF2F8" stroke-width="4" fill="none" />
-
-                    <!-- Активный путь, составляющий 75% круга -->
-                    <circle cx="34" cy="34" r="32" stroke="black" stroke-width="4" stroke-linecap="round" fill="none"
+                    <circle class="active-path" cx="34" cy="34" r="32" stroke="black" stroke-width="4" stroke-linecap="round" fill="none"
                             stroke-dasharray="150.8 201.1" stroke-dashoffset="0" transform="rotate(-90 34 34)">
                     </circle>
-
-                    <!-- Текст 75% по центру круга -->
-                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-weight="bold" fill="black">
-                        -
-                    </text>
+                    <text class="percent-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="16" font-weight="bold" fill="black"></text>
                 </svg>
             </div>
         </div>

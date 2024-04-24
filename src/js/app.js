@@ -15,6 +15,30 @@ BaseHelpers.headerFixed();
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    function setPercentage(svg, percentage) {
+        const circle = svg.querySelector('.active-path');
+        const text = svg.querySelector('.percent-text');
+        const circumference = 2 * Math.PI * circle.getAttribute('r');
+        const activeLength = (percentage / 100) * circumference;
+        const inactiveLength = circumference - activeLength;
+
+        circle.setAttribute('stroke-dasharray', `${activeLength} ${inactiveLength}`);
+
+        if (svg.classList.contains('no-goals')) {
+            text.textContent = '-'
+        } else {
+            text.textContent = `${percentage}%`;
+        }
+        svg.style.display = 'block'
+    }
+
+    const svgs = document.querySelectorAll('.circle-percent-js');
+
+    svgs.forEach(svg => {
+        const percentage = svg.dataset.percent;
+        setPercentage(svg, percentage);
+    });
+
     const choicesSelects = document.querySelectorAll('.choices-select-js');
 
     choicesSelects.forEach(function (element) {
