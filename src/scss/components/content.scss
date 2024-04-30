@@ -221,7 +221,26 @@
                 flex-wrap: wrap;
                 .form__label {
                     width: 100%;
+                    margin-top: 0;
                     margin-bottom: 1rem;
+                    &:has(.state) {
+                        display: flex;
+                        align-items: center;
+                        .query-title {
+                            min-width: 217px;
+                        }
+                        .state {
+                            min-width: 88px;
+                            text-align: center;
+                            margin-left: 1.5rem;
+                            padding: 7px;
+                            font-size: .75rem;
+                            line-height: 18px;
+                            color: $white;
+                            background-color: #AD85FD;
+                            border-radius: 1rem;
+                        }
+                    }
                 }
                 .editor__wrap {
                     padding: 36px 16px;
@@ -380,6 +399,62 @@
             }
         }
     }
+}
+
+.grouped-initiatives-components {
+    margin-top: 1rem;
+    border-radius: 10px;
+    background: $bg-color;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 1rem;
+        .title {
+            font-size: 1rem;
+            line-height: 26px;
+            font-weight: 500;
+        }
+        &.active svg {
+            transform: rotate(180deg);
+        }
+        svg {
+            color: $text-color-secondary ;
+            transition: all .3s;
+        }
+    }
+    &__content {
+        padding: .5rem 2.5rem 26px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -.25rem -.5rem;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 135px;
+        height: 120px;
+        margin: 0 .25rem .5rem;
+        background-color: $white;
+        border: 1px solid #A1A2A4;
+        border-radius: 1rem;
+        .title {
+            position: absolute;
+            top: 5.5px;
+            left: 12px;
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
+}
+
+.grouped-initiatives__queries {
+    margin-top: 20px;
 }
 
 @media (min-width: $tv) and (max-width: 991px) {
@@ -633,6 +708,16 @@
             margin-top: 2rem;
         }
     }
+    .grouped-initiatives-components__content {
+        padding: .5rem 1rem 1.25rem;
+    }
+    .tracked-initiatives-content__top .form__group-query .form__label:has(.state) {
+        justify-content: space-between;
+        padding-right: 0;
+        .query-title {
+            min-width: auto;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -676,6 +761,10 @@
     .user-greeting {
         font-size: 18px;
         line-height: 23px;
+    }
+    .grouped-initiatives-components__item {
+        width: calc(50% - .5rem);
+        height: 110px;
     }
 }
 

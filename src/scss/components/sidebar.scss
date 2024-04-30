@@ -1,3 +1,10 @@
+.sidebar .logo {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 12px;
+    padding: 12px 0;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;

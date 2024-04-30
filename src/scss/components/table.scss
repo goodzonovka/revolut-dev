@@ -614,6 +614,116 @@
         background-position: left 10.5px center;
         background-size: 13px !important;
     }
+    &.table-view-4 {
+        margin-top: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        .table__inner {
+            min-width: auto;
+        }
+        .table__row {
+            &:not(.table__row-header) {
+                border-top: 1px solid #eaecf0;
+            }
+            &:last-child {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+        .table__row-header {
+            background-color: #fcfcfd;
+            box-shadow: none;
+        }
+        .table__top {
+            height: 80px;
+            padding: 1rem;
+            background: $bg-color;
+            cursor: pointer;
+            &.active svg {
+                transform: rotate(180deg);
+            }
+            svg {
+                color: $text-color-secondary ;
+                transition: all .3s;
+            }
+        }
+        .table__title {
+            font-size: 1rem;
+            line-height: 26px;
+            font-weight: 500;
+        }
+        .table__th, .table__td {
+            flex: initial;
+            flex-shrink: 0;
+            font-size: 12px;
+            line-height: 18px;
+            color: $text-color-secondary;
+            &:nth-child(1) {
+                width: 25.745%;
+                padding-left: 40px;
+            }
+            &:nth-child(2) {
+                width: 23.215%;
+            }
+            &:nth-child(3) {
+                width: 17.56%;
+            }
+            &:nth-child(4) {
+                width: 15.923%;
+            }
+            &:nth-child(5) {
+                width: 17.56%;
+            }
+        }
+        .table__th {
+            padding: 13px 12px 13px 24px;
+            font-weight: 500;
+            &:nth-child(4) {
+                padding-left: 10px;
+            }
+            svg {
+                margin-left: .25rem;
+            }
+        }
+        .table__td {
+            padding: 11px 12px 11px 24px;
+            background: $bg-color;
+            &:nth-child(1),
+            &:nth-child(2) {
+                font-weight: 500;
+            }
+            &:nth-child(1),
+            &:nth-child(3) {
+                line-height: 20px;
+            }
+            &:nth-child(1) {
+                font-size: 14px;
+            }
+            &:nth-child(4) {
+                justify-content: center;
+            }
+        }
+        .status {
+            width: auto;
+            min-width: 60px;
+            padding: 2px;
+            line-height: 18px;
+        }
+        @media (max-width: 1365px) {
+            .table__th, .table__td {
+                &:nth-child(1) {
+                    padding-left: 12px;
+                }
+            }
+            .table__td {
+                padding-left: 12px;
+            }
+        }
+        @media (max-width: $device) {
+            .table__inner {
+                min-width: 540px;
+            }
+        }
+    }
     @media (min-width: $ds) and (max-width: 1365px) {
         &.table-view-2 {
             font-size: 14px;

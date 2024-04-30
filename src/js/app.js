@@ -351,6 +351,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    let toggleButtons = document.querySelectorAll('.toggle-button-js');
+
+    // Добавляем обработчик события клика каждой кнопке
+    toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Получаем селектор из data-trigger
+            let selector = button.getAttribute('data-trigger');
+            let target = document.querySelector(selector);
+
+            // Переключаем класс 'active' и стиль display для целевого элемента
+            if (target) {
+                target.classList.toggle('active');
+                button.classList.toggle('active');
+                if (target.style.display === 'block' || target.style.display === '') {
+                    target.style.display = 'none';
+                } else {
+                    target.style.display = 'block';
+                }
+            }
+        });
+    });
 });
 
 window.onload = function () {

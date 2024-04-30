@@ -1,0 +1,208 @@
+<div class="tracked-initiatives">
+    <button class="tracked-initiatives-sidebar__open" aria-label="Open additional information">
+        <svg width="30" height="30">
+            <use href="/images/icons/icons.svg#hamburger-list"></use>
+        </svg>
+    </button>
+    <div class="tracked-initiatives-content">
+        <div class="block tracked-initiatives-content__top">
+            <div class="form__group form__group-name">
+                <label class="form__label">Name</label>
+                <input type="text" class="form__input" placeholder="Group: Onboarding">
+            </div>
+
+            <div class="table table-view-4">
+                <div class="table__top toggle-button-js active" data-trigger="#table">
+                    <div class="table__title">All initiatives</div>
+                    <svg width="24" height="24">
+                        <use href="/images/icons/icons.svg#chevron-up"></use>
+                    </svg>
+                </div>
+                <div id="table" class="table__scroll active">
+                    <div class="table__inner">
+                        <div class="table__row table__row-header">
+                            <div class="table__th">
+                                Name
+                                <svg width="16" height="16">
+                                    <use href="/images/icons/icons.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <div class="table__th">Product</div>
+                            <div class="table__th">
+                                Created
+                                <svg width="16" height="16">
+                                    <use href="/images/icons/icons.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <div class="table__th">Status</div>
+                            <div class="table__th">Epic</div>
+                        </div>
+
+                        <div class="table__row">
+                            <div class="table__td">
+                                <span class="table__td-name">Okta integration</span>
+                            </div>
+                            <div class="table__td">Onboarding</div>
+                            <div class="table__td">68 days ago</div>
+                            <div class="table__td">
+                                <div class="status status-2">Done</div>
+                            </div>
+                            <div class="table__td"></div>
+                        </div>
+
+                        <div class="table__row">
+                            <div class="table__td">
+                                <span class="table__td-name">Vault new UI</span>
+                            </div>
+                            <div class="table__td">Onboarding</div>
+                            <div class="table__td">68 days ago</div>
+                            <div class="table__td">
+                                <div class="status status-3">Started</div>
+                            </div>
+                            <div class="table__td"></div>
+                        </div>
+
+                        <div class="table__row">
+                            <div class="table__td">
+                                <span class="table__td-name">Supplier portal</span>
+                            </div>
+                            <div class="table__td">Cashback</div>
+                            <div class="table__td">68 days ago</div>
+                            <div class="table__td">
+                                <div class="status status-1">To Start</div>
+                            </div>
+                            <div class="table__td"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grouped-initiatives-components">
+                <div class="grouped-initiatives-components__top toggle-button-js active"
+                     data-trigger="#grouped-initiatives-components-content">
+                    <div class="title">Components</div>
+                    <svg width="24" height="24">
+                        <use href="/images/icons/icons.svg#chevron-up"></use>
+                    </svg>
+                </div>
+                <div id="grouped-initiatives-components-content" class="grouped-initiatives-components__content active">
+                    <ul class="grouped-initiatives-components__list">
+                        <li class="grouped-initiatives-components__item">
+                            <div class="title">Design</div>
+                            <img src="/images/grouped-initiatives/design.png" width="42" height="46" alt="">
+                        </li>
+                        <li class="grouped-initiatives-components__item">
+                            <div class="title">Code</div>
+                            <img src="/images/grouped-initiatives/code.png" width="61" height="58" alt="">
+                        </li>
+                        <li class="grouped-initiatives-components__item">
+                            <div class="title">Backlog</div>
+                            <img src="/images/grouped-initiatives/backlog.png" width="54" height="50" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grouped-initiatives__queries">
+                <div class="form__group form__group-query">
+                    <div class="form__label">
+                        <div class="query-title">
+                            Primary Query
+                            <div class="text-small">(Impact on company goals & ROI)</div>
+                        </div>
+                        <div class="state">Churn</div>
+                    </div>
+                    <div class="editor__wrap">
+                        <div class="editor__bg">
+                            <div class="editor editor-readonly-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__group form__group-query">
+                    <div class="form__label">
+                        <div class="query-title">
+                            Secondary Query
+                            <div class="text-small">(Impact on company goal)</div>
+                        </div>
+                        <div class="state">ARR</div>
+                    </div>
+                    <div class="editor__wrap">
+                        <div class="editor__bg">
+                            <div class="editor editor-readonly-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="block tracked-initiatives-sidebar">
+        <button class="tracked-initiatives-sidebar__close" aria-label="Close additional information">
+            <svg width="44" height="44">
+                <use href="/images/icons/icons.svg#cancel"></use>
+            </svg>
+        </button>
+
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Release Date</div>
+
+            <div class="tracked-initiatives-sidebar__value">23 Oct</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Development cost</div>
+
+            <div class="tracked-initiatives-sidebar__value">$35-50K</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div class="tracked-initiatives-sidebar__header">
+                <div>Goals</div>
+                <button class="btn">Add Goal</button>
+            </div>
+
+            <ul class="kpi">
+                <li class="kpi__item">
+                    <div class="kpi__title">
+                        <b>All</b>
+                    </div>
+                    <div class="kpi__progress-full">
+                        <div class="kpi__progress-active" style="width:75%">
+                            <span class="kpi__progress-value">75%</span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="kpi__item">
+                    <div class="kpi__title">#Churn</div>
+                    <div class="kpi__progress-full">
+                        <div class="kpi__progress-active" style="width:100%">
+                            <span class="kpi__progress-value">100%</span>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="kpi__item">
+                    <div class="kpi__title">#ARR</div>
+                    <div class="kpi__progress-full">
+                        <div class="kpi__progress-active" style="width:55%">
+                            <span class="kpi__progress-value">55%</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
