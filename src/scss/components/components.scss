@@ -1,3 +1,25 @@
+.checkbox {
+    input {
+        display: none;
+        &:checked + .checkbox__icon {
+            background: #0070FF url("../images/icons/icons.svg#check") no-repeat center;
+            background-size: 14px;
+            border-color: #0070FF;
+        }
+    }
+    &__icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #D0D5DD;
+        border-radius: 6px;
+        cursor: pointer;
+        &:hover {
+            border-color: #0070FF;
+        }
+    }
+}
+
 /* Стиль тултипа */
 .tooltip {
     width: 100%;

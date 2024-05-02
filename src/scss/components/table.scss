@@ -169,27 +169,6 @@
                 line-height: 18px;
             }
         }
-        .checkbox {
-            input {
-                display: none;
-                &:checked + .checkbox__icon {
-                    background: #0070FF url("../images/icons/icons.svg#check") no-repeat center;
-                    background-size: 14px;
-                    border-color: #0070FF;
-                }
-            }
-            &__icon {
-                display: block;
-                width: 20px;
-                height: 20px;
-                border: 1px solid #D0D5DD;
-                border-radius: 6px;
-                cursor: pointer;
-                &:hover {
-                    border-color: #0070FF;
-                }
-            }
-        }
         .progress__value {
             width: 43px;
         }
@@ -454,7 +433,7 @@
             & > * {
                 margin: 0 7.5px 7px;
             }
-            &:has(.table-filter-selected.active) .table-filter__btn {
+            &:has(.table-filter-selected.active) .table-filter__btn:not(.table-filter__btn-2) {
                 padding: 0;
                 font-size: 0;
                 width: 45px;

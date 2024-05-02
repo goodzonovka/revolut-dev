@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
         const countDisplay = document.getElementById('selected-count');
 
-        if (checkboxes.length) {
+        if (checkboxes.length && countDisplay) {
             countDisplay.textContent = selectedCount;
         }
     }

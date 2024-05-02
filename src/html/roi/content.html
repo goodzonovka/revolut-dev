@@ -1,0 +1,194 @@
+<div class="block roi">
+    <div class="roi__header">
+        <div class="roi__buttons">
+            <a href="roi.html" class="roi__button active">MRR</a>
+            <a href="#" class="roi__button">
+                <i>Churn <span>(coming soon)</span></i>
+            </a>
+            <a href="#" class="roi__button">
+                <i>Users <span>(coming soon)</span></i>
+            </a>
+            <a href="roi-custom.html" class="roi__button">
+                <i>Custom</i>
+            </a>
+        </div>
+
+        <div class="roi__sort">
+            <select class="choices-select-js">
+                <option value="">Group By</option>
+                <option value="1">ROI of Product</option>
+                <option value="2">Epics</option>
+                <option value="3">Groups or initiatives</option>
+            </select>
+
+            <select class="choices-select-js">
+                <option value="">Select Period</option>
+                <option value="1">last 6 months</option>
+                <option value="2">last year</option>
+                <option value="3">previous year</option>
+            </select>
+        </div>
+    </div>
+
+    <ul class="roi__list">
+        <li class="roi-item">
+            <div class="roi-item__header toggle-button-js active" data-trigger="#graph-1">
+                <div>
+                    <div class="title">US EXPANSIOn</div>
+                    <div class="text">in expected range</div>
+                </div>
+
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#chevron-up"></use>
+                </svg>
+            </div>
+
+            <div id="graph-1" class="roi-item__content active">
+                <div class="roi-item__graph">
+                    <img src="/images/roi/graph-demo.png" width="537" height="185" alt="">
+                </div>
+
+                <ul class="roi-item__bottom">
+                    <li>
+                        <div class="title">Cost</div>
+                        <div class="value">608,762</div>
+                        <svg width="16" height="16" class="up">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li>
+                        <div class="title">Revenue</div>
+                        <div class="value">242,928</div>
+                        <svg width="16" height="16">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li class="border-top">
+                        <div class="title">ROI</div>
+                        <div class="value">30,817</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="roi-item">
+            <div class="roi-item__header toggle-button-js active" data-trigger="#graph-2">
+                <div>
+                    <div class="title">Onboarding 2.0</div>
+                    <div class="text">in expected range</div>
+                </div>
+
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#chevron-up"></use>
+                </svg>
+            </div>
+
+            <div id="graph-2" class="roi-item__content active">
+                <div class="roi-item__graph">
+                    <img src="/images/roi/graph-demo.png" width="537" height="185" alt="">
+                </div>
+
+                <ul class="roi-item__bottom">
+                    <li>
+                        <div class="title">Cost</div>
+                        <div class="value">608,762</div>
+                        <svg width="16" height="16" class="green">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li>
+                        <div class="title">Revenue</div>
+                        <div class="value">242,928</div>
+                        <svg width="16" height="16" class="green up">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li class="border-top">
+                        <div class="title">ROI</div>
+                        <div class="value">30,817</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="roi-item">
+            <div class="roi-item__header roi-item__header-red toggle-button-js active" data-trigger="#graph-3">
+                <div>
+                    <div class="title">Cash back product</div>
+                    <div class="text">Negative ROI</div>
+                </div>
+
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#chevron-up"></use>
+                </svg>
+            </div>
+
+            <div id="graph-3" class="roi-item__content active">
+                <ul class="roi-item__bottom">
+                    <li>
+                        <div class="title">Cost</div>
+                        <div class="value">608,762</div>
+                        <svg width="16" height="16" class="up">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li>
+                        <div class="title">Revenue</div>
+                        <div class="value">50,002</div>
+                        <svg width="16" height="16">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li>
+                        <div class="title">ROI</div>
+                        <div class="value">-558,760</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="roi-item">
+            <div class="roi-item__header roi-item__header-yellow toggle-button-js active" data-trigger="#graph-4">
+                <div>
+                    <div class="title">Cash back product</div>
+                    <div class="text">Negative ROI</div>
+                </div>
+
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#chevron-up"></use>
+                </svg>
+            </div>
+
+            <div id="graph-4" class="roi-item__content active">
+                <ul class="roi-item__bottom">
+                    <li>
+                        <div class="title">Cost</div>
+                        <div class="value">608,762</div>
+                        <svg width="16" height="16">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li>
+                        <div class="title">Revenue</div>
+                        <div class="value">242,928</div>
+                        <svg width="16" height="16" class="green up">
+                            <use href="/images/icons/icons.svg#arrow-bold"></use>
+                        </svg>
+                    </li>
+
+                    <li>
+                        <div class="title">ROI</div>
+                        <div class="value">30,817</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
