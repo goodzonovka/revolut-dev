@@ -32,10 +32,10 @@
     .form__input {
         width: 632px;
     }
-    .tooltip {
+    .tooltip-icon {
         position: relative;
         margin-left: 21px;
-        &:hover .tooltip__content {
+        &:hover .tooltip-icon__content {
             display: block;
         }
         &__btn {
@@ -128,7 +128,7 @@
         }
     }
     @media (min-width: 992px) {
-        &:has(.tooltip) .form__group:not(:has(.tooltip)) {
+        &:has(.tooltip-icon) .form__group:not(:has(.tooltip-icon)-icon) {
             padding-right: 46px;
         }
     }
@@ -155,7 +155,7 @@
     }
     @media (max-width: 991px) {
         padding: 24px 16px;
-        .tooltip {
+        .tooltip-icon {
             position: absolute;
             right: 0;
             top: 0;
