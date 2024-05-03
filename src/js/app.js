@@ -385,6 +385,29 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add("active");
         });
     });
+
+    const tableCheckboxes = document.querySelectorAll('.table__checkbox');
+    const tableBottom = document.querySelector('.table__bottom');
+    const tableScroll = document.querySelector('.table__scroll');
+
+    // Функция для изменения позиции .table__bottom
+    function updatePosition(checkbox) {
+        const checkboxParent = checkbox.closest('.table__td');
+        const checkboxRect = checkboxParent.getBoundingClientRect();
+        const scrollRect = tableScroll.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const relativeTop = checkboxRect.top - scrollRect.top + scrollTop;
+
+        // Обновляем стиль для .table__bottom
+        tableBottom.style.top = `${relativeTop}px`;
+    }
+
+    // Добавляем обработчик события клика для каждого чекбокса
+    tableCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('click', function() {
+            updatePosition(this);
+        });
+    });
 });
 
 window.onload = function () {

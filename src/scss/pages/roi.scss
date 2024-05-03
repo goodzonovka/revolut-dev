@@ -310,7 +310,8 @@
 
         .table__td {
             flex: initial;
-            padding: 16px 14px;
+            padding-left: 14px;
+            padding-right: 14px;
             &:nth-child(1) {
                 width: 80px;
                 justify-content: center;
