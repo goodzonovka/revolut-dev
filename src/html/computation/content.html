@@ -1,0 +1,89 @@
+<div class="block computation">
+    <div class="form__group">
+        <label class="form__label basic-content">
+            Development cost
+            <div class="text-small">Cost per effort worked</div>
+        </label>
+
+        <label class="form__label advance-content">
+            Cost
+        </label>
+
+        <input type="text" class="form__input" placeholder="$ 10,000">
+
+        <div class="tooltip">
+            <div class="tooltip__btn">
+                <svg width="24" height="24">
+                    <use href="/images/icons/icons.svg#question"></use>
+                </svg>
+            </div>
+            <div class="tooltip__content">
+                <div class="tooltip__content-inner">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                    commodi esse officia!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__group form__group-tabs">
+        <label class="form__label basic-content">
+            Churn
+            <div class="text-small">Value of % change in churn</div>
+        </label>
+
+        <label class="form__label advance-content">
+            Churn
+            <div class="text-small">Select level of issues you<br> want to sync from Jira</div>
+        </label>
+
+        <div class="computation__tabs-wrap">
+            <div class="computation__tabs">
+                <button class="computation__tab active">Basic</button>
+                <button class="computation__tab computation__tab-advance">Advance (query based)</button>
+            </div>
+
+            <div class="editor__wrap advance-content">
+                <div class="editor__bg">
+                    <div class="editor editor-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                </div>
+                <div class="editor__footer">
+                    <div class="editor__error">
+                        Syntax error: syntax error at or near "year".
+                    </div>
+                    <button class="btn">
+                        <svg width="24" height="24">
+                            <use href="/images/icons/icons.svg#play"></use>
+                        </svg>
+                        Run Query
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__group form__group-base-value">
+        <label class="form__label">
+            <div class="text-small">
+                Base Value: The value<br>
+                each 1% change in churn<br>
+                will be calculated from.
+            </div>
+            <b>Base Value</b>
+        </label>
+        <input type="text" class="form__input" placeholder="$100.000">
+    </div>
+
+    <div class="form__group">
+        <label class="form__label">
+            User
+            <div class="text-small">Average value per user (ARPU)</div>
+        </label>
+        <input type="text" class="form__input" placeholder="$ 10,000">
+    </div>
+</div>

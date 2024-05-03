@@ -50,6 +50,10 @@
                 background-color: $white;
             }
         }
+        .no-icon {
+            width: 24px;
+            height: 24px;
+        }
         &__title {
             margin: 0 16px;
             flex-grow: 1;

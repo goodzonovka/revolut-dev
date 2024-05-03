@@ -1,0 +1,207 @@
+.content:has(.computation) {
+    display: flex;
+    flex-direction: column;
+}
+
+.computation {
+    flex-grow: 1;
+    margin-top: 1rem;
+    padding: 22px 35px;
+    &:has(.computation__tab-advance.active) {
+        .advance-content {
+            display: block;
+        }
+        .basic-content {
+            display: none;
+        }
+    }
+    .advance-content {
+        display: none;
+    }
+    .form__group {
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+        &:first-child .form__input {
+            height: 50px;
+        }
+    }
+    .form__label {
+        width: 246px;
+    }
+    .form__input {
+        width: 632px;
+    }
+    .tooltip {
+        position: relative;
+        margin-left: 21px;
+        &:hover .tooltip__content {
+            display: block;
+        }
+        &__btn {
+            cursor: pointer;
+            &:hover svg {
+                color: $main-color;
+            }
+        }
+        &__content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            right: -1rem;
+            width: 240px;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 20px;
+            box-shadow: 0 0 3px #ccc;
+            border-radius: 4px;
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                right: 22.5px;
+                transform: rotate(45deg);
+                width: 10px;
+                height: 10px;
+                margin-bottom: -5px;
+                background-color: #fff;
+                box-shadow: 0 0 3px #ccc;
+            }
+            &-inner {
+                position: relative;
+                padding: 8px 16px;
+                background-color: $white;
+                border-radius: 4px;
+            }
+        }
+    }
+    &__tabs {
+        display: inline-flex;
+        border-radius: 10px;
+        overflow: hidden;
+        &-wrap {
+            max-width: calc(100% - 246px);
+        }
+    }
+
+    &__tab {
+        width: 159px;
+        padding: 7.5px 0;
+        font-size: 12px;
+        line-height: 15px;
+        color: $white;
+        background-color: rgba(114, 118, 147, 0.6);
+        &:hover:not(.active) {
+            background-color: rgba(114, 118, 147, 0.8);
+        }
+        &.active {
+            font-weight: bold;
+            background-color: #727693;
+        }
+    }
+
+    .form__group-tabs {
+        align-items: flex-start;
+        .editor__wrap {
+            max-width: 100%;
+            width: 629px;
+            margin-top: 41px;
+        }
+    }
+
+    .form__group-base-value {
+        .form__label {
+            display: flex;
+            align-items: center;
+            width: 400px;
+            .text-small {
+                margin-left: 26px;
+            }
+            b {
+                margin-left: 56px;
+                font-weight: 500;
+            }
+        }
+        .form__input {
+            width: 478px;
+        }
+    }
+    @media (min-width: 992px) {
+        &:has(.tooltip) .form__group:not(:has(.tooltip)) {
+            padding-right: 46px;
+        }
+    }
+    @media (max-width: 1199px) {
+        .form__label {
+            width: 200px;
+        }
+        .form__group-base-value {
+            .form__label {
+                width: 325px;
+
+                .text-small {
+                    margin-left: 0;
+                }
+
+                b {
+                    margin-left: 40px;
+                }
+            }
+        }
+        &__tabs-wrap {
+            max-width: calc(100% - 200px);
+        }
+    }
+    @media (max-width: 991px) {
+        padding: 24px 16px;
+        .tooltip {
+            position: absolute;
+            right: 0;
+            top: 0;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            &__content {
+                width: 200px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        .form__group:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        .form__input {
+            width: 100%;
+        }
+        .form__group-base-value {
+            .form__label {
+                b {
+                    order: -1;
+                    margin-left: 0;
+                    margin-right: 40px;
+                }
+            }
+            .form__input {
+                width: 100%;
+            }
+        }
+        &__tabs-wrap {
+            max-width: 100%;
+            width: 100%;
+            margin-top: 6px;
+        }
+        .form__group-tabs .editor__wrap {
+            margin-top: 24px;
+        }
+    }
+    @media (max-width: 390px) {
+        &__tabs {
+           display: flex;
+        }
+        &__tab {
+            width: 50%;
+        }
+    }
+}

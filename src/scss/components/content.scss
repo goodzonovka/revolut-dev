@@ -197,6 +197,62 @@
     .form__input {
         height: 50px;
     }
+    .form__label {
+        width: 289px;
+        &:has(.status) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .status {
+        position: relative;
+        margin-right: 7px;
+        padding: 3px 8px 2px 19px;
+        font-size: 11.54px;
+        line-height: 17.31px;
+        color: $green;
+        background: rgba(35, 136, 35, 0.1);
+        border-radius: 15.39px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $green;
+        }
+    }
+    .form__icon-input .form__input {
+        &::placeholder {
+            font-style: italic;
+            font-weight: 400;
+        }
+        &:not(.placeholder-grey)::placeholder {
+            color: #011729;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1200px) {
+        .form__label {
+            width: 220px;
+        }
+    }
+    @media (max-width: 991px) {
+        .form__label:has(.status) {
+            width: 220px;
+        }
+        .status {
+            margin-right: 0;
+        }
+    }
+    @media (max-width: 480px) {
+        .form__label:has(.status) {
+            width: 240px;
+        }
+    }
 }
 
 .tracked-initiatives {

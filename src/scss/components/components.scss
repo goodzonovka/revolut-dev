@@ -20,47 +20,6 @@
     }
 }
 
-/* Стиль тултипа */
-.tooltip {
-    width: 100%;
-    display: inline-block;
-    position: relative;
-}
-
-.tooltip .tooltiptext {
-    bottom: 100%;
-    left: 0;
-    font-size: 14px;
-    line-height: 1.4;
-    width: 213px;
-    margin-bottom: 10px;
-    visibility: hidden;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 4px 10px;
-
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-    &:before {
-        content: '';
-        position: absolute;
-        left: 1rem;
-        top: 100%;
-        transform: rotate(45deg);
-        width: 12px;
-        height: 12px;
-        margin-top: -6px;
-        background: black;
-    }
-}
-
-.tooltip:has(.overflowing):hover .tooltiptext {
-    visibility: visible;
-}
-
 .flatpickr-calendar.rangeMode {
     width: 574px;
     .flatpickr-days {

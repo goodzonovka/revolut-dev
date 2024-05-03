@@ -373,6 +373,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    let computationsTabs = document.querySelectorAll(".computation__tab");
+
+    computationsTabs.forEach(function(tab) {
+        tab.addEventListener("click", function() {
+            computationsTabs.forEach(function(tab) {
+                tab.classList.remove("active");
+            });
+
+            this.classList.add("active");
+        });
+    });
 });
 
 window.onload = function () {
