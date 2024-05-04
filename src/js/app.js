@@ -336,22 +336,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateSelectedCount();
 
-    const showInputGroupName = document.getElementById('show-input-group-name');
-
-    const inputGroupName = document.getElementById('input-group-name');
-
-    if (inputGroupName) {
-        inputGroupName.style.display = 'none';
-
-        showInputGroupName.addEventListener('click', function () {
-            if (inputGroupName.style.display === 'none') {
-                inputGroupName.style.display = 'block';
-            } else {
-                inputGroupName.style.display = 'none';
-            }
-        });
-    }
-
     let toggleButtons = document.querySelectorAll('.toggle-button-js');
 
     // Добавляем обработчик события клика каждой кнопке
@@ -395,8 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const checkboxParent = checkbox.closest('.table__td');
         const checkboxRect = checkboxParent.getBoundingClientRect();
         const scrollRect = tableScroll.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const relativeTop = checkboxRect.top - scrollRect.top + scrollTop;
+        const relativeTop = checkboxRect.top - scrollRect.top;
 
         // Обновляем стиль для .table__bottom
         tableBottom.style.top = `${relativeTop}px`;
