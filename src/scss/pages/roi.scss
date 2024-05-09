@@ -93,9 +93,15 @@
         width: calc(50% - 14px);
         margin: 0 7px 20px;
         overflow: hidden;
-        &:not(:has(.roi-item__graph)) .roi-item__bottom {
-            padding-top: 1rem;
-            border-top: none;
+        &:has(.roi-item__graph.active) {
+            .roi-item__bottom {
+                padding-top: 0;
+                border-top: 1px solid $secondary-color;
+                pointer-events: initial;
+            }
+            .roi-item__button:after {
+                visibility: visible;
+            }
         }
         &__header {
             display: flex;
@@ -105,9 +111,10 @@
             line-height: 20px;
             letter-spacing: .5px;
             background-color: rgba(35, 136, 35, .15);
-            border-radius: 10px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            user-select: none;
             &.active {
-                border-radius: 10px 10px 0 0;
                 svg {
                     transform: rotate(180deg);
                 }
@@ -145,8 +152,10 @@
         &__bottom {
             display: flex;
             text-align: center;
+            padding-top: 1rem;
             font-weight: 400;
-            border-top: 1px solid $secondary-color;
+            pointer-events: none;
+            user-select: none;
             li {
                 width: 33.33%;
                 position: relative;
@@ -159,15 +168,6 @@
                     height: calc(100% - 26px);
                     transform: translateY(-50%);
                     border-right: 1px solid $secondary-color;
-                }
-                &.border-top:after {
-                    content: '';
-                    position: absolute;
-                    top: 4px;
-                    left: 8px;
-                    width: calc(100% - 16px);
-                    border-bottom: 3px solid $secondary-color;
-                    border-radius: 8px;
                 }
             }
             .title {
@@ -189,6 +189,23 @@
                 }
                 &.green {
                     color: $green;
+                }
+            }
+        }
+        &__button {
+            cursor: pointer;
+            outline: none;
+            &.active {
+                cursor: default;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    left: 8px;
+                    width: calc(100% - 16px);
+                    border-bottom: 3px solid $secondary-color;
+                    border-radius: 8px;
+                    visibility: hidden;
                 }
             }
         }
