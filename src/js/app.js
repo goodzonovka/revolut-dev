@@ -370,28 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const tableCheckboxes = document.querySelectorAll('.table__checkbox');
-    const tableBottom = document.querySelector('.table__bottom');
-    const tableScroll = document.querySelector('.table__scroll');
-
-    // Функция для изменения позиции .table__bottom
-    function updatePosition(checkbox) {
-        const checkboxParent = checkbox.closest('.table__td');
-        const checkboxRect = checkboxParent.getBoundingClientRect();
-        const scrollRect = tableScroll.getBoundingClientRect();
-        const relativeTop = checkboxRect.top - scrollRect.top;
-
-        // Обновляем стиль для .table__bottom
-        tableBottom.style.top = `${relativeTop}px`;
-    }
-
-    // Добавляем обработчик события клика для каждого чекбокса
-    tableCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('click', function() {
-            updatePosition(this);
-        });
-    });
-
     const roiItemButtons = document.querySelectorAll('.roi-item__button');
 
     // Добавляем обработчик события клика на каждую кнопку

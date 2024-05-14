@@ -1,0 +1,125 @@
+<div class="tracked-initiatives children-same-height">
+    <button class="tracked-initiatives-sidebar__open" aria-label="Open additional information">
+        <svg width="30" height="30">
+            <use href="/images/icons/icons.svg#hamburger-list"></use>
+        </svg>
+    </button>
+    <div class="tracked-initiatives-content">
+        <div class="block tracked-initiatives-content__top">
+            <div class="form__group form__group-name">
+                <label class="form__label">Name</label>
+                <input type="text" class="form__input" placeholder="Group: Onboarding">
+            </div>
+
+            <div class="table table-view-5">
+                <div class="table__top toggle-button-js active" data-trigger="#table-2">
+                    <div class="table__title">Components</div>
+                    <svg width="24" height="24">
+                        <use href="/images/icons/icons.svg#chevron-up"></use>
+                    </svg>
+                </div>
+                <div id="table-2" class="table__scroll active">
+                    <div class="table__inner">
+                        <div class="table__row table__row-header">
+                            <div class="table__th"></div>
+                            <div class="table__th">Name</div>
+                            <div class="table__th">Date</div>
+                            <div class="table__th">Cost</div>
+                            <div class="table__th">Link</div>
+                        </div>
+
+                        <div class="table__row">
+                            <div class="table__td">
+                                <img src="/images/grouped-initiatives/github.png" width="20" height="20" alt="">
+                            </div>
+                            <div class="table__td">
+                                <span class="table__td-name">MER-82: [QUERY-RESULT]</span>
+                            </div>
+                            <div class="table__td">
+                                <div><b>Merged</b> 1 month ago</div>
+                            </div>
+                            <div class="table__td">$12,000</div>
+                            <div class="table__td">
+                                <a href="#">
+                                    <img src="/images/grouped-initiatives/github-link.png" width="20" height="20" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="table__row">
+                            <div class="table__td">
+                                <img src="/images/grouped-initiatives/github.png" width="20" height="20" alt="">
+                            </div>
+                            <div class="table__td">
+                                <span class="table__td-name">MER-82: [QUERY-RESULT]</span>
+                            </div>
+                            <div class="table__td">
+                                <div><b>Merged</b> 1 month ago</div>
+                            </div>
+                            <div class="table__td">$12,000</div>
+                            <div class="table__td">
+                                <a href="#">
+                                    <img src="/images/grouped-initiatives/github-link.png" width="20" height="20" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grouped-initiatives__queries">
+                <div class="form__group form__group-query">
+                    <div class="form__label">
+                        <div class="query-title">
+                            Primary Query
+                            <div class="text-small">(Impact on company goals & ROI)</div>
+                        </div>
+                        <div class="state">Churn</div>
+                    </div>
+                    <div class="editor__wrap">
+                        <div class="editor__bg">
+                            <div class="editor editor-readonly-js">SELECT
+    DATE(ticket_created) AS ticket_date,
+    COUNT(ticket_id) AS support_tickets_count
+FROM Zendesk.support_tickets
+WHERE product_name = 'FAQ Rewards'
+GROUP BY DATE(ticket_created);</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="block tracked-initiatives-sidebar">
+        <button class="tracked-initiatives-sidebar__close" aria-label="Close additional information">
+            <svg width="44" height="44">
+                <use href="/images/icons/icons.svg#cancel"></use>
+            </svg>
+        </button>
+
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Release Date</div>
+
+            <div class="tracked-initiatives-sidebar__value">23 Oct</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Version ID</div>
+
+            <div class="tracked-initiatives-sidebar__value">V1.2340</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Status</div>
+
+            <div class="tracked-initiatives-sidebar__value tracked-initiatives-sidebar__value-green">Done</div>
+        </div>
+        <div class="tracked-initiatives-sidebar__item">
+            <div>Development cost</div>
+
+            <div class="tracked-initiatives-sidebar__value">$35-50K</div>
+        </div>
+
+    </div>
+
+</div>
